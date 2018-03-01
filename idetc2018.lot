@@ -1,0 +1,8 @@
+\contentsline {table}{\numberline {1}{\ignorespaces Example\nobreakspace {}\ref {5pos}: Pose Data\relax }}{5}{table.caption.13}
+\contentsline {table}{\numberline {2}{\ignorespaces Example \ref {5pos}: Four singular vectors obtained after SVD of the matrix $[A]$ of size $4\times 8$.\relax }}{6}{table.caption.14}
+\contentsline {table}{\numberline {3}{\ignorespaces Example \ref {5pos}: Two optimum dyad-vectors obtained as result of optimization\relax }}{6}{table.caption.15}
+\contentsline {table}{\numberline {4}{\ignorespaces Example\nobreakspace {}\ref {4pos1line1pose}: Pose Data\relax }}{6}{table.caption.18}
+\contentsline {table}{\numberline {5}{\ignorespaces Example \ref {4pos1line1pose}: Four singular vectors obtained after SVD of the matrix $[A]$ of size $4\times 8$. The vectors form basis for the null space\relax }}{7}{table.caption.19}
+\contentsline {table}{\numberline {6}{\ignorespaces Example \ref {4pos1line1pose}: Four optimum dyad-vectors obtained as result of optimization\relax }}{7}{table.caption.20}
+\contentsline {table}{\numberline {7}{\ignorespaces Real Solutions for $\alpha _i$, $\lambda _i$ and $\mu $\relax }}{8}{table.caption.21}
+\contentsline {table}{\numberline {8}{\ignorespaces Optimality Evaluations for Dyads\relax }}{8}{table.caption.22}

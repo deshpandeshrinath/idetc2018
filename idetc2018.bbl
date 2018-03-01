@@ -1,0 +1,58 @@
+\begin{thebibliography}{10}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{sohmccarthy}
+McCarthy, J.~M. and Soh, G.~S., 2010, Geometric design of linkages, volume~11,
+  Springer.
+
+\bibitem{Sandor}
+Sandor, G.~N. and Erdman, A.~G., 1997, Advanced Mechanism Design: Analysis and
+  Synthesis Vol. 2, Prentice-Hall, Englewood Cliffs, NJ.
+
+\bibitem{Hunt78}
+Hunt, K., 1978, Kinematic Geometry of Mechanisms, Clarendon Press, Oxford.
+
+\bibitem{Hartenberg}
+Hartenberg, R.~S. and Denavit, J., 1964, Kinematic Synthesis of Linkages,
+  McGraw-Hill, New York.
+
+\bibitem{Suh78}
+Suh, C.~H. and Radcliffe, C.~W., 1978, Kinematics and Mechanism Design, John
+  Wiley and Sons, New York.
+
+\bibitem{lohse2013}
+Lohse, P., 2013, Getriebesynthese: Bewegungsabläufe ebener Koppelmechanismen,
+  Springer-Verlag.
+
+\bibitem{cui2009}
+Cui, M., Femiani, J., Hu, J., Wonka, P., and Razdan, A., 2009, \enquote{Curve
+  matching for open 2D curves}, Pattern Recognition Letters, \textbf{30(1)},
+  pp. 1--10.
+
+\bibitem{ullah1997}
+Ullah, I. and Kota, S., 1997, \enquote{Optimal synthesis of mechanisms for path
+  generation using Fourier descriptors and global search methods}, Journal of
+  Mechanical Design, \textbf{119(4)}, pp. 504--510.
+
+\bibitem{hinton2006}
+Hinton, G.~E. and Salakhutdinov, R.~R., 2006, \enquote{Reducing the
+  dimensionality of data with neural networks}, science, \textbf{313(5786)},
+  pp. 504--507.
+
+\bibitem{song2013}
+Song, C., Liu, F., Huang, Y., Wang, L., and Tan, T., 2013,
+  \enquote{Auto-encoder based data clustering}, Iberoamerican Congress on
+  Pattern Recognition, Springer, pp. 117--124.
+
+\bibitem{ward1963}
+Ward~Jr, J.~H., 1963, \enquote{Hierarchical grouping to optimize an objective
+  function}, Journal of the American statistical association, \textbf{58(301)},
+  pp. 236--244.
+
+\end{thebibliography}
