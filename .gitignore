@@ -1,0 +1,9 @@
+*.bbl
+*.aux
+*.lof
+*.out
+*.gz
+*.log
+*.lot
+*.blg
+*-eps-converted-to.pdf
