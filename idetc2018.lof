@@ -1,8 +1,8 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces a) The path of the input motion along with direction of parameterization. b) Motion components $x(t), y(t), \theta (t)$ are plotted against parameter t.\relax }}{3}{figure.caption.3}
-\contentsline {figure}{\numberline {2}{\ignorespaces Curvature and its usigned integral for the path shown in Fig.\nobreakspace {}\ref {bsplineFitting}\relax }}{3}{figure.caption.4}
+\contentsline {figure}{\numberline {2}{\ignorespaces Curvature and its unsigned integral for the path shown in Fig.\nobreakspace {}\ref {bsplineFitting}\relax }}{3}{figure.caption.4}
 \contentsline {figure}{\numberline {3}{\ignorespaces Path and motion signatures of the motion shown in Fig.\nobreakspace {}\ref {bsplineFitting}\relax }}{4}{figure.caption.5}
 \contentsline {figure}{\numberline {4}{\ignorespaces Part path is formed by trimming whole path followed by translation and scaling.\relax }}{4}{figure.caption.6}
-\contentsline {figure}{\numberline {5}{\ignorespaces The domain of path signature is scale invariant but the range still has a scaling factor, which is taken by normalized cros-correlation.\relax }}{5}{figure.caption.7}
+\contentsline {figure}{\numberline {5}{\ignorespaces The domain of path signature is scale invariant but the range still has a scaling factor, which is taken by normalized cross-correlation.\relax }}{5}{figure.caption.7}
 \contentsline {figure}{\numberline {6}{\ignorespaces Normalized cross correlation of the signatures computed along each direction is shown. It can be seen that exact match is found at $j=0$.\relax }}{5}{figure.caption.8}
 \contentsline {figure}{\numberline {7}{\ignorespaces Motion Signatures of the trajectories shown in Fig.\ref {wholePart}. The domain as well as range of motion signature is invariant to similarity transformation.\relax }}{5}{figure.caption.9}
 \contentsline {figure}{\numberline {8}{\ignorespaces Dissimilarity function of two motion signatures along both directions. It can be seen that exact match is found at $j=0$, where template is fully embedded inside the other motion.\relax }}{5}{figure.caption.10}
@@ -12,12 +12,14 @@
 \contentsline {figure}{\numberline {12}{\ignorespaces Motion signatures obtained by steps given in\nobreakspace {}\ref {sec_sign}. Although topology difference is even more evident in this representation, it also signifies the similarity pattern between them.\relax }}{7}{figure.caption.14}
 \contentsline {figure}{\numberline {13}{\ignorespaces Probability Distribution function used in random sampling for parameters $l_1$, $l_2$ and $l_3$.\relax }}{7}{figure.caption.15}
 \contentsline {figure}{\numberline {14}{\ignorespaces A small scale version of the Auto-Encoder. This network takes 5 dimensional input in the input layer. At each encoder layer, input is compressed into vector of lesser dimensions, lowest at the bottleneck layer.\relax }}{8}{figure.caption.16}
-\contentsline {figure}{\numberline {15}{\ignorespaces Motion Query : Task Motion drawn specified by user.\relax }}{8}{figure.caption.17}
+\contentsline {figure}{\numberline {15}{\ignorespaces Motion Query : Task Motion drawn specified by user.\relax }}{9}{figure.caption.17}
 \contentsline {figure}{\numberline {16}{\ignorespaces Query Result: Motion signatures in the dataset with highest similarity.\relax }}{9}{figure.caption.18}
 \contentsline {figure}{\numberline {17}{\ignorespaces First Linkage in the table\nobreakspace {}\ref {knnLinkageData} and its resultant motion.\relax }}{9}{figure.caption.21}
-\contentsline {figure}{\numberline {18}{\ignorespaces Second Linkage in the table\nobreakspace {}\ref {knnLinkageData} and its resultant motion.\relax }}{9}{figure.caption.22}
+\contentsline {figure}{\numberline {18}{\ignorespaces Second Linkage in the table\nobreakspace {}\ref {knnLinkageData} and its resultant motion.\relax }}{10}{figure.caption.22}
 \contentsline {figure}{\numberline {19}{\ignorespaces Third Linkage in the table\nobreakspace {}\ref {knnLinkageData} and its resultant motion.\relax }}{10}{figure.caption.23}
 \contentsline {figure}{\numberline {20}{\ignorespaces Fourth Linkage in the table\nobreakspace {}\ref {knnLinkageData} and its resultant motion.\relax }}{10}{figure.caption.24}
 \contentsline {figure}{\numberline {21}{\ignorespaces Fifth Linkage in the table\nobreakspace {}\ref {knnLinkageData} and its resultant motion.\relax }}{10}{figure.caption.25}
 \contentsline {figure}{\numberline {22}{\ignorespaces Sixth Linkage in the table\nobreakspace {}\ref {knnLinkageData} and its resultant motion.\relax }}{11}{figure.caption.26}
 \contentsline {figure}{\numberline {23}{\ignorespaces Seventh Linkage in the table\nobreakspace {}\ref {knnLinkageData} and its resultant motion.\relax }}{11}{figure.caption.27}
+\contentsline {figure}{\numberline {24}{\ignorespaces Eighth Linkage in the table\nobreakspace {}\ref {knnLinkageData} and its resultant motion.\relax }}{11}{figure.caption.28}
+\contentsline {figure}{\numberline {25}{\ignorespaces Eighth Linkage in the table\nobreakspace {}\ref {knnLinkageData} and its resultant motion.\relax }}{11}{figure.caption.29}

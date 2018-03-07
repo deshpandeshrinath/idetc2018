@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  7 MAR 2018 16:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  7 MAR 2018 17:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -953,17 +953,12 @@ Package epstopdf Info: Source file: <figure/sol1.eps>
 (epstopdf)                    date: 2018-03-07 16:45:18
 (epstopdf)                    size: 36312 bytes
 (epstopdf)             Output file: <figure/sol1-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-06 03:51:38
-(epstopdf)                    size: 10124 bytes
+(epstopdf)                    date: 2018-03-07 16:45:27
+(epstopdf)                    size: 10207 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/sol1-eps-converted-
 to.pdf figure/sol1.eps>
 (epstopdf)             \includegraphics on input line 533.
-runsystem(repstopdf --outfile=figure/sol1-eps-converted-to.pdf figure/sol1.eps)
-...executed safely (allowed).
-
-Package epstopdf Info: Result file: <figure/sol1-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-07 16:45:27
-(epstopdf)                    size: 10207 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 <figure/sol1-eps-converted-to.pdf, id=431, 408.52625pt x 336.25626pt>
 File: figure/sol1-eps-converted-to.pdf Graphic file (type pdf)
@@ -976,17 +971,12 @@ Package epstopdf Info: Source file: <figure/sol2.eps>
 (epstopdf)                    date: 2018-03-07 16:41:42
 (epstopdf)                    size: 113677 bytes
 (epstopdf)             Output file: <figure/sol2-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-06 03:51:39
-(epstopdf)                    size: 77538 bytes
+(epstopdf)                    date: 2018-03-07 16:45:28
+(epstopdf)                    size: 89700 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/sol2-eps-converted-
 to.pdf figure/sol2.eps>
 (epstopdf)             \includegraphics on input line 540.
-runsystem(repstopdf --outfile=figure/sol2-eps-converted-to.pdf figure/sol2.eps)
-...executed safely (allowed).
-
-Package epstopdf Info: Result file: <figure/sol2-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-07 16:45:28
-(epstopdf)                    size: 89700 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 <figure/sol2-eps-converted-to.pdf, id=434, 408.52625pt x 300.12125pt>
 File: figure/sol2-eps-converted-to.pdf Graphic file (type pdf)
@@ -999,17 +989,12 @@ Package epstopdf Info: Source file: <figure/sol3.eps>
 (epstopdf)                    date: 2018-03-07 16:38:44
 (epstopdf)                    size: 52785 bytes
 (epstopdf)             Output file: <figure/sol3-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-06 03:51:39
-(epstopdf)                    size: 25898 bytes
+(epstopdf)                    date: 2018-03-07 16:45:28
+(epstopdf)                    size: 26319 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/sol3-eps-converted-
 to.pdf figure/sol3.eps>
 (epstopdf)             \includegraphics on input line 547.
-runsystem(repstopdf --outfile=figure/sol3-eps-converted-to.pdf figure/sol3.eps)
-...executed safely (allowed).
-
-Package epstopdf Info: Result file: <figure/sol3-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-07 16:45:28
-(epstopdf)                    size: 26319 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 <figure/sol3-eps-converted-to.pdf, id=437, 408.52625pt x 307.1475pt>
 File: figure/sol3-eps-converted-to.pdf Graphic file (type pdf)
@@ -1022,17 +1007,12 @@ Package epstopdf Info: Source file: <figure/sol4.eps>
 (epstopdf)                    date: 2018-03-07 16:34:44
 (epstopdf)                    size: 69517 bytes
 (epstopdf)             Output file: <figure/sol4-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-06 03:51:40
-(epstopdf)                    size: 39611 bytes
+(epstopdf)                    date: 2018-03-07 16:45:29
+(epstopdf)                    size: 39899 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/sol4-eps-converted-
 to.pdf figure/sol4.eps>
 (epstopdf)             \includegraphics on input line 554.
-runsystem(repstopdf --outfile=figure/sol4-eps-converted-to.pdf figure/sol4.eps)
-...executed safely (allowed).
-
-Package epstopdf Info: Result file: <figure/sol4-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-07 16:45:29
-(epstopdf)                    size: 39899 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 <figure/sol4-eps-converted-to.pdf, id=440, 406.51875pt x 334.24875pt>
 File: figure/sol4-eps-converted-to.pdf Graphic file (type pdf)
@@ -1045,17 +1025,12 @@ Package epstopdf Info: Source file: <figure/sol5.eps>
 (epstopdf)                    date: 2018-03-07 16:30:27
 (epstopdf)                    size: 37569 bytes
 (epstopdf)             Output file: <figure/sol5-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-07 16:22:02
-(epstopdf)                    size: 9789 bytes
+(epstopdf)                    date: 2018-03-07 16:45:30
+(epstopdf)                    size: 9872 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/sol5-eps-converted-
 to.pdf figure/sol5.eps>
 (epstopdf)             \includegraphics on input line 561.
-runsystem(repstopdf --outfile=figure/sol5-eps-converted-to.pdf figure/sol5.eps)
-...executed safely (allowed).
-
-Package epstopdf Info: Result file: <figure/sol5-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-07 16:45:30
-(epstopdf)                    size: 9872 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 <figure/sol5-eps-converted-to.pdf, id=443, 500.87125pt x 684.5575pt>
 File: figure/sol5-eps-converted-to.pdf Graphic file (type pdf)
@@ -1068,17 +1043,12 @@ Package epstopdf Info: Source file: <figure/sol6.eps>
 (epstopdf)                    date: 2018-03-07 16:26:12
 (epstopdf)                    size: 141862 bytes
 (epstopdf)             Output file: <figure/sol6-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-06 14:36:32
-(epstopdf)                    size: 118920 bytes
+(epstopdf)                    date: 2018-03-07 16:45:30
+(epstopdf)                    size: 117933 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/sol6-eps-converted-
 to.pdf figure/sol6.eps>
 (epstopdf)             \includegraphics on input line 568.
-runsystem(repstopdf --outfile=figure/sol6-eps-converted-to.pdf figure/sol6.eps)
-...executed safely (allowed).
-
-Package epstopdf Info: Result file: <figure/sol6-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-07 16:45:30
-(epstopdf)                    size: 117933 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 <figure/sol6-eps-converted-to.pdf, id=446, 462.72874pt x 421.575pt>
 File: figure/sol6-eps-converted-to.pdf Graphic file (type pdf)
@@ -1105,14 +1075,43 @@ File: figure/sol7-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: figure/sol7-eps-converted-to.pdf used on input line 57
 5.
 (pdftex.def)             Requested size: 240.0pt x 213.46423pt.
+Package epstopdf Info: Source file: <figure/sol7.eps>
+(epstopdf)                    date: 2018-03-06 14:33:27
+(epstopdf)                    size: 129446 bytes
+(epstopdf)             Output file: <figure/sol7-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-03-06 14:36:33
+(epstopdf)                    size: 119070 bytes
+(epstopdf)             Command: <repstopdf --outfile=figure/sol7-eps-converted-
+to.pdf figure/sol7.eps>
+(epstopdf)             \includegraphics on input line 582.
+Package epstopdf Info: Output file is already uptodate.
+File: figure/sol7-eps-converted-to.pdf Graphic file (type pdf)
+ <use figure/sol7-eps-converted-to.pdf>
+Package pdftex.def Info: figure/sol7-eps-converted-to.pdf used on input line 58
+2.
+(pdftex.def)             Requested size: 240.0pt x 213.46423pt.
+Package epstopdf Info: Source file: <figure/sol7.eps>
+(epstopdf)                    date: 2018-03-06 14:33:27
+(epstopdf)                    size: 129446 bytes
+(epstopdf)             Output file: <figure/sol7-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-03-06 14:36:33
+(epstopdf)                    size: 119070 bytes
+(epstopdf)             Command: <repstopdf --outfile=figure/sol7-eps-converted-
+to.pdf figure/sol7.eps>
+(epstopdf)             \includegraphics on input line 589.
+Package epstopdf Info: Output file is already uptodate.
+File: figure/sol7-eps-converted-to.pdf Graphic file (type pdf)
 
-Underfull \vbox (badness 3039) has occurred while \output is active []
+<use figure/sol7-eps-converted-to.pdf>
+Package pdftex.def Info: figure/sol7-eps-converted-to.pdf used on input line 58
+9.
+(pdftex.def)             Requested size: 240.0pt x 213.46423pt.
 
- [8 <./figure/fig_auto_encoder-eps-converted-to.pdf> <./figure/fig_motion_query
--eps-converted-to.pdf>] [9 <./figure/fig_ex_motion_signatures-eps-converted-to.
-pdf> <./figure/sol1-eps-converted-to.pdf> <./figure/sol2-eps-converted-to.pdf>]
+Underfull \vbox (badness 1596) has occurred while \output is active []
 
-(./idetc2018.bbl
+ [8 <./figure/fig_auto_encoder-eps-converted-to.pdf>] (./idetc2018.bbl [9 <./fi
+gure/fig_motion_query-eps-converted-to.pdf> <./figure/fig_ex_motion_signatures-
+eps-converted-to.pdf> <./figure/sol1-eps-converted-to.pdf>]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¤ in font ptmr7t!
 
@@ -1123,12 +1122,12 @@ Underfull \hbox (badness 1997) in paragraph at lines 30--32
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
+[10 <./figure/sol2-eps-converted-to.pdf> <./figure/sol3-eps-converted-to.pdf> <
+./figure/sol4-eps-converted-to.pdf> <./figure/sol5-eps-converted-to.pdf>]
+[11 <./figure/sol6-eps-converted-to.pdf> <./figure/sol7-eps-converted-to.pdf>])
+[12
 
-Underfull \vbox (badness 1596) has occurred while \output is active []
-
- [10 <./figure/sol3-eps-converted-to.pdf> <./figure/sol4-eps-converted-to.pdf> 
-<./figure/sol5-eps-converted-to.pdf>]) [11 <./figure/sol6-eps-converted-to.pdf>
- <./figure/sol7-eps-converted-to.pdf>] (./idetc2018.lot)
+] (./idetc2018.lot)
 \tf@lot=\write4
 \openout4 = `idetc2018.lot'.
 
@@ -1142,14 +1141,14 @@ Underfull \hbox (badness 1215) in paragraph at lines 9--9
 \tf@lof=\write5
 \openout5 = `idetc2018.lof'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 601.
- [12
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 615.
+ [13
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 601.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 615.
  (./idetc2018.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 601.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 601.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 615.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 615.
 Package rerunfilecheck Info: File `idetc2018.out' has not changed.
 (rerunfilecheck)             Checksum: D791D118CBDF6A82F6266713E442CB18;720.
 
@@ -1159,17 +1158,17 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 601.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 615.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 8878 strings out of 493014
- 136708 string characters out of 6133351
- 250321 words of memory out of 5000000
- 12115 multiletter control sequences out of 15000+600000
+ 8887 strings out of 493014
+ 136803 string characters out of 6133351
+ 251321 words of memory out of 5000000
+ 12121 multiletter control sequences out of 15000+600000
  62230 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,15n,39p,485b,2172s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1186,10 +1185,10 @@ s/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/ur
 w/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/u
 tmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on idetc2018.pdf (12 pages, 2218432 bytes).
+Output written on idetc2018.pdf (13 pages, 2219202 bytes).
 PDF statistics:
- 698 PDF objects out of 1000 (max. 8388607)
- 485 compressed objects within 5 object streams
- 116 named destinations out of 1000 (max. 500000)
+ 709 PDF objects out of 1000 (max. 8388607)
+ 493 compressed objects within 5 object streams
+ 119 named destinations out of 1000 (max. 500000)
  196 words of extra memory for PDF output out of 10000 (max. 10000000)
 
