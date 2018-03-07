@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  7 MAR 2018 17:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  7 MAR 2018 17:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -455,23 +455,7 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \algocf@algobox=\box38
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 27.
- (./idetc2018.aux
-
-LaTeX Warning: Label `knnSol3' multiply defined.
-
-
-LaTeX Warning: Label `knnSol3' multiply defined.
-
-
-LaTeX Warning: Label `knnSol3' multiply defined.
-
-
-LaTeX Warning: Label `knnSol3' multiply defined.
-
-
-LaTeX Warning: Label `knnSol3' multiply defined.
-
-)
+ (./idetc2018.aux)
 \openout1 = `idetc2018.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
@@ -489,7 +473,8 @@ LaTeX Font Info:    ... okay on input line 76.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
 LaTeX Font Info:    ... okay on input line 76.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 76.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -596,9 +581,6 @@ Overfull \vbox (10.39023pt too high) has occurred while \output is active []
 LaTeX Warning: Reference `computeCurvature' on page 3 undefined on input line 1
 87.
 
-
-LaTeX Warning: Citation `scipy' on page 3 undefined on input line 211.
-
 Package epstopdf Info: Source file: <figure/fig_bspline.eps>
 (epstopdf)                    date: 2018-03-07 03:50:07
 (epstopdf)                    size: 85189 bytes
@@ -609,7 +591,7 @@ Package epstopdf Info: Source file: <figure/fig_bspline.eps>
 verted-to.pdf figure/fig_bspline.eps>
 (epstopdf)             \includegraphics on input line 218.
 Package epstopdf Info: Output file is already uptodate.
-<figure/fig_bspline-eps-converted-to.pdf, id=120, 736.7525pt x 505.89pt>
+<figure/fig_bspline-eps-converted-to.pdf, id=121, 736.7525pt x 505.89pt>
 File: figure/fig_bspline-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/fig_bspline-eps-converted-to.pdf>
@@ -632,7 +614,7 @@ converted-to.pdf figure/fig_curvatureK.eps>
 (epstopdf)             \includegraphics on input line 225.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_curvatureK-eps-converted-to.pdf, id=121, 724.7075pt x 507.8975pt>
+<figure/fig_curvatureK-eps-converted-to.pdf, id=122, 724.7075pt x 507.8975pt>
 File: figure/fig_curvatureK-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/fig_curvatureK-eps-converted-to.pdf>
@@ -651,7 +633,7 @@ converted-to.pdf figure/fig_signatures.eps>
 (epstopdf)             \includegraphics on input line 243.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_signatures-eps-converted-to.pdf, id=128, 767.86874pt x 488.82625pt>
+<figure/fig_signatures-eps-converted-to.pdf, id=129, 767.86874pt x 488.82625pt>
 File: figure/fig_signatures-eps-converted-to.pdf Graphic file (type pdf)
 <use figure/fig_signatures-eps-converted-to.pdf>
 Package pdftex.def Info: figure/fig_signatures-eps-converted-to.pdf used on inp
@@ -676,7 +658,7 @@ converted-to.pdf figure/fig_whole_part.eps>
 (epstopdf)             \includegraphics on input line 280.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_whole_part-eps-converted-to.pdf, id=192, 659.46375pt x 480.79625pt>
+<figure/fig_whole_part-eps-converted-to.pdf, id=194, 659.46375pt x 480.79625pt>
 File: figure/fig_whole_part-eps-converted-to.pdf Graphic file (type pdf)
 <use figure/fig_whole_part-eps-converted-to.pdf>
 Package pdftex.def Info: figure/fig_whole_part-eps-converted-to.pdf used on inp
@@ -694,7 +676,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 287.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_path_signatures-eps-converted-to.pdf, id=193, 722.7pt x 516.93124pt
+<figure/fig_path_signatures-eps-converted-to.pdf, id=195, 722.7pt x 516.93124pt
 >
 File: figure/fig_path_signatures-eps-converted-to.pdf Graphic file (type pdf)
  <use figure/fig_path_signatures-eps-converted-to.pdf>
@@ -712,7 +694,7 @@ ed-to.pdf figure/fig_ncc.eps>
 (epstopdf)             \includegraphics on input line 294.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_ncc-eps-converted-to.pdf, id=194, 735.74875pt x 510.90875pt>
+<figure/fig_ncc-eps-converted-to.pdf, id=196, 735.74875pt x 510.90875pt>
 File: figure/fig_ncc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/fig_ncc-eps-converted-to.pdf>
@@ -739,7 +721,7 @@ es-eps-converted-to.pdf figure/fig_motion_signatures.eps>
 (epstopdf)             \includegraphics on input line 313.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_motion_signatures-eps-converted-to.pdf, id=235, 737.75626pt x 523.9
+<figure/fig_motion_signatures-eps-converted-to.pdf, id=237, 737.75626pt x 523.9
 575pt>
 File: figure/fig_motion_signatures-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -758,7 +740,7 @@ ed-to.pdf figure/fig_mcc.eps>
 (epstopdf)             \includegraphics on input line 320.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_mcc-eps-converted-to.pdf, id=238, 670.505pt x 486.81876pt>
+<figure/fig_mcc-eps-converted-to.pdf, id=240, 670.505pt x 486.81876pt>
 File: figure/fig_mcc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/fig_mcc-eps-converted-to.pdf>
@@ -779,7 +761,7 @@ verted-to.pdf figure/fig_fourbar.eps>
 (epstopdf)             \includegraphics on input line 343.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_fourbar-eps-converted-to.pdf, id=306, 279.0425pt x 180.675pt>
+<figure/fig_fourbar-eps-converted-to.pdf, id=308, 279.0425pt x 180.675pt>
 File: figure/fig_fourbar-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/fig_fourbar-eps-converted-to.pdf>
@@ -802,7 +784,7 @@ es-eps-converted-to.pdf figure/fig_sa_coupler_curves.eps>
 (epstopdf)             \includegraphics on input line 371.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_sa_coupler_curves-eps-converted-to.pdf, id=315, 603.25375pt x 455.7
+<figure/fig_sa_coupler_curves-eps-converted-to.pdf, id=317, 603.25375pt x 455.7
 025pt>
 File: figure/fig_sa_coupler_curves-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -822,7 +804,7 @@ ction-eps-converted-to.pdf figure/fig_sa_distance_function.eps>
 (epstopdf)             \includegraphics on input line 378.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_sa_distance_function-eps-converted-to.pdf, id=316, 715.67375pt x 50
+<figure/fig_sa_distance_function-eps-converted-to.pdf, id=318, 715.67375pt x 50
 5.89pt>
 File: figure/fig_sa_distance_function-eps-converted-to.pdf Graphic file (type p
 df)
@@ -842,7 +824,7 @@ tures-eps-converted-to.pdf figure/fig_sa_motion_signatures.eps>
 (epstopdf)             \includegraphics on input line 385.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_sa_motion_signatures-eps-converted-to.pdf, id=319, 613.29124pt x 46
+<figure/fig_sa_motion_signatures-eps-converted-to.pdf, id=321, 613.29124pt x 46
 5.74pt>
 File: figure/fig_sa_motion_signatures-eps-converted-to.pdf Graphic file (type p
 df)
@@ -864,7 +846,7 @@ onverted-to.pdf figure/fig_logNormal.eps>
 (epstopdf)             \includegraphics on input line 407.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_logNormal-eps-converted-to.pdf, id=353, 722.7pt x 505.89pt>
+<figure/fig_logNormal-eps-converted-to.pdf, id=355, 722.7pt x 505.89pt>
 File: figure/fig_logNormal-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/fig_logNormal-eps-converted-to.pdf>
@@ -889,15 +871,12 @@ s-converted-to.pdf figure/fig_auto_encoder.eps>
 (epstopdf)             \includegraphics on input line 452.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_auto_encoder-eps-converted-to.pdf, id=418, 438.63875pt x 357.335pt>
+<figure/fig_auto_encoder-eps-converted-to.pdf, id=420, 438.63875pt x 357.335pt>
 File: figure/fig_auto_encoder-eps-converted-to.pdf Graphic file (type pdf)
 <use figure/fig_auto_encoder-eps-converted-to.pdf>
 Package pdftex.def Info: figure/fig_auto_encoder-eps-converted-to.pdf used on i
 nput line 452.
 (pdftex.def)             Requested size: 240.0pt x 195.51523pt.
-
-
-LaTeX Warning: Reference `knnSol7' on page 8 undefined on input line 472.
 
 
 LaTeX Warning: Reference `knnsol1' on page 8 undefined on input line 473.
@@ -923,7 +902,7 @@ s-converted-to.pdf figure/fig_motion_query.eps>
 (epstopdf)             \includegraphics on input line 478.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_motion_query-eps-converted-to.pdf, id=429, 477.785pt x 400.49625pt>
+<figure/fig_motion_query-eps-converted-to.pdf, id=432, 477.785pt x 400.49625pt>
 File: figure/fig_motion_query-eps-converted-to.pdf Graphic file (type pdf)
 <use figure/fig_motion_query-eps-converted-to.pdf>
 Package pdftex.def Info: figure/fig_motion_query-eps-converted-to.pdf used on i
@@ -941,7 +920,7 @@ tures-eps-converted-to.pdf figure/fig_ex_motion_signatures.eps>
 (epstopdf)             \includegraphics on input line 485.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_ex_motion_signatures-eps-converted-to.pdf, id=430, 722.7pt x 505.89
+<figure/fig_ex_motion_signatures-eps-converted-to.pdf, id=433, 722.7pt x 505.89
 pt>
 File: figure/fig_ex_motion_signatures-eps-converted-to.pdf Graphic file (type p
 df)
@@ -960,7 +939,7 @@ to.pdf figure/sol1.eps>
 (epstopdf)             \includegraphics on input line 533.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/sol1-eps-converted-to.pdf, id=431, 408.52625pt x 336.25626pt>
+<figure/sol1-eps-converted-to.pdf, id=434, 408.52625pt x 336.25626pt>
 File: figure/sol1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/sol1-eps-converted-to.pdf>
@@ -978,7 +957,7 @@ to.pdf figure/sol2.eps>
 (epstopdf)             \includegraphics on input line 540.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/sol2-eps-converted-to.pdf, id=434, 408.52625pt x 300.12125pt>
+<figure/sol2-eps-converted-to.pdf, id=437, 408.52625pt x 300.12125pt>
 File: figure/sol2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/sol2-eps-converted-to.pdf>
@@ -996,7 +975,7 @@ to.pdf figure/sol3.eps>
 (epstopdf)             \includegraphics on input line 547.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/sol3-eps-converted-to.pdf, id=437, 408.52625pt x 307.1475pt>
+<figure/sol3-eps-converted-to.pdf, id=440, 408.52625pt x 307.1475pt>
 File: figure/sol3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/sol3-eps-converted-to.pdf>
@@ -1014,7 +993,7 @@ to.pdf figure/sol4.eps>
 (epstopdf)             \includegraphics on input line 554.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/sol4-eps-converted-to.pdf, id=440, 406.51875pt x 334.24875pt>
+<figure/sol4-eps-converted-to.pdf, id=443, 406.51875pt x 334.24875pt>
 File: figure/sol4-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/sol4-eps-converted-to.pdf>
@@ -1032,7 +1011,7 @@ to.pdf figure/sol5.eps>
 (epstopdf)             \includegraphics on input line 561.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/sol5-eps-converted-to.pdf, id=443, 500.87125pt x 684.5575pt>
+<figure/sol5-eps-converted-to.pdf, id=446, 500.87125pt x 684.5575pt>
 File: figure/sol5-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/sol5-eps-converted-to.pdf>
@@ -1050,7 +1029,7 @@ to.pdf figure/sol6.eps>
 (epstopdf)             \includegraphics on input line 568.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/sol6-eps-converted-to.pdf, id=446, 462.72874pt x 421.575pt>
+<figure/sol6-eps-converted-to.pdf, id=449, 462.72874pt x 421.575pt>
 File: figure/sol6-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/sol6-eps-converted-to.pdf>
@@ -1068,7 +1047,7 @@ to.pdf figure/sol7.eps>
 (epstopdf)             \includegraphics on input line 575.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/sol7-eps-converted-to.pdf, id=449, 408.52625pt x 363.3575pt>
+<figure/sol7-eps-converted-to.pdf, id=452, 408.52625pt x 363.3575pt>
 File: figure/sol7-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/sol7-eps-converted-to.pdf>
@@ -1155,9 +1134,6 @@ Package rerunfilecheck Info: File `idetc2018.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 615.
  )
 (\end occurred inside a group at level 1)
@@ -1165,9 +1141,9 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 615.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 8887 strings out of 493014
- 136803 string characters out of 6133351
- 251321 words of memory out of 5000000
+ 8888 strings out of 493014
+ 136813 string characters out of 6133351
+ 252044 words of memory out of 5000000
  12121 multiletter control sequences out of 15000+600000
  62230 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1185,10 +1161,10 @@ s/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/ur
 w/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/u
 tmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on idetc2018.pdf (13 pages, 2219202 bytes).
+Output written on idetc2018.pdf (13 pages, 2220231 bytes).
 PDF statistics:
- 709 PDF objects out of 1000 (max. 8388607)
- 493 compressed objects within 5 object streams
- 119 named destinations out of 1000 (max. 500000)
+ 721 PDF objects out of 1000 (max. 8388607)
+ 504 compressed objects within 6 object streams
+ 120 named destinations out of 1000 (max. 500000)
  196 words of extra memory for PDF output out of 10000 (max. 10000000)
 
