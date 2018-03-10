@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  9 MAR 2018 22:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  10 MAR 2018 00:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -562,7 +562,7 @@ df>
 (epstopdf)                    size: 447250 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/overall_approach-ep
 s-converted-to.pdf figure/overall_approach.eps>
-(epstopdf)             \includegraphics on input line 117.
+(epstopdf)             \includegraphics on input line 116.
 Package epstopdf Info: Output file is already uptodate.
 
 <figure/overall_approach-eps-converted-to.pdf, id=52, 1094.0875pt x 362.35374pt
@@ -570,12 +570,12 @@ Package epstopdf Info: Output file is already uptodate.
 File: figure/overall_approach-eps-converted-to.pdf Graphic file (type pdf)
  <use figure/overall_approach-eps-converted-to.pdf>
 Package pdftex.def Info: figure/overall_approach-eps-converted-to.pdf used on i
-nput line 117.
+nput line 116.
 (pdftex.def)             Requested size: 542.025pt x 179.5177pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 118.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 117.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 118.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 117.
 
 Underfull \vbox (badness 1406) has occurred while \output is active []
 
@@ -593,22 +593,15 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 ]
 Underfull \vbox (badness 6173) has occurred while \output is active []
 
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 170.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 171.
 
 Overfull \vbox (18.42049pt too high) has occurred while \output is active []
 
 
 [2 <./figure/overall_approach-eps-converted-to.pdf>]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 172.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 173.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-LaTeX Warning: Reference `curvature' on page 3 undefined on input line 232.
-
 Package epstopdf Info: Source file: <figure/fig_bspline.eps>
 (epstopdf)                    date: 2018-03-07 03:50:07
 (epstopdf)                    size: 85189 bytes
@@ -617,14 +610,15 @@ Package epstopdf Info: Source file: <figure/fig_bspline.eps>
 (epstopdf)                    size: 50114 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/fig_bspline-eps-con
 verted-to.pdf figure/fig_bspline.eps>
-(epstopdf)             \includegraphics on input line 240.
+(epstopdf)             \includegraphics on input line 238.
 Package epstopdf Info: Output file is already uptodate.
-<figure/fig_bspline-eps-converted-to.pdf, id=118, 736.7525pt x 505.89pt>
+
+<figure/fig_bspline-eps-converted-to.pdf, id=119, 736.7525pt x 505.89pt>
 File: figure/fig_bspline-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/fig_bspline-eps-converted-to.pdf>
 Package pdftex.def Info: figure/fig_bspline-eps-converted-to.pdf used on input 
-line 240.
+line 238.
 (pdftex.def)             Requested size: 240.0pt x 164.79053pt.
 Package epstopdf Info: Source file: <figure/fig_curvatureK.eps>
 (epstopdf)                    date: 2018-03-07 11:44:12
@@ -635,46 +629,42 @@ Package epstopdf Info: Source file: <figure/fig_curvatureK.eps>
 (epstopdf)                    size: 28254 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/fig_curvatureK-eps-
 converted-to.pdf figure/fig_curvatureK.eps>
-(epstopdf)             \includegraphics on input line 247.
+(epstopdf)             \includegraphics on input line 245.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_curvatureK-eps-converted-to.pdf, id=119, 724.7075pt x 507.8975pt>
+<figure/fig_curvatureK-eps-converted-to.pdf, id=120, 724.7075pt x 507.8975pt>
 File: figure/fig_curvatureK-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/fig_curvatureK-eps-converted-to.pdf>
 Package pdftex.def Info: figure/fig_curvatureK-eps-converted-to.pdf used on inp
-ut line 247.
+ut line 245.
 (pdftex.def)             Requested size: 240.0pt x 168.19568pt.
- [3]
+ [3 <./figure/fig_bspline-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figure/fig_signatures.eps>
-(epstopdf)                    date: 2018-03-07 02:55:42
-(epstopdf)                    size: 85294 bytes
+(epstopdf)                    date: 2018-03-09 23:31:48
+(epstopdf)                    size: 88136 bytes
 (epstopdf)             Output file: <figure/fig_signatures-eps-converted-to.pdf
 >
-(epstopdf)                    date: 2018-03-07 02:55:51
-(epstopdf)                    size: 42957 bytes
+(epstopdf)                    date: 2018-03-09 23:31:54
+(epstopdf)                    size: 44097 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/fig_signatures-eps-
 converted-to.pdf figure/fig_signatures.eps>
-(epstopdf)             \includegraphics on input line 265.
+(epstopdf)             \includegraphics on input line 264.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_signatures-eps-converted-to.pdf, id=172, 767.86874pt x 488.82625pt>
+<figure/fig_signatures-eps-converted-to.pdf, id=193, 767.86874pt x 497.86pt>
 File: figure/fig_signatures-eps-converted-to.pdf Graphic file (type pdf)
+
 <use figure/fig_signatures-eps-converted-to.pdf>
 Package pdftex.def Info: figure/fig_signatures-eps-converted-to.pdf used on inp
-ut line 265.
-(pdftex.def)             Requested size: 240.0pt x 152.7802pt.
-
-Underfull \vbox (badness 3058) has occurred while \output is active []
-
+ut line 264.
+(pdftex.def)             Requested size: 240.0pt x 155.60365pt.
 
 Overfull \hbox (17.13449pt too wide) detected at line 291
 \OML/ztmcm/m/it/10 Cn\OT1/ztmcm/m/n/10 (\OML/ztmcm/m/it/10 j; p; W\OT1/ztmcm/m/
 n/10 ) = \OMS/ztmcm/m/n/10 j [] []j\OML/ztmcm/m/it/10 ;
  []
 
-[4 <./figure/fig_bspline-eps-converted-to.pdf> <./figure/fig_curvatureK-eps-con
-verted-to.pdf> <./figure/fig_signatures-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figure/fig_whole_part.eps>
 (epstopdf)                    date: 2018-03-09 21:14:44
 (epstopdf)                    size: 127899 bytes
@@ -687,7 +677,7 @@ converted-to.pdf figure/fig_whole_part.eps>
 (epstopdf)             \includegraphics on input line 303.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_whole_part-eps-converted-to.pdf, id=235, 659.46375pt x 480.79625pt>
+<figure/fig_whole_part-eps-converted-to.pdf, id=200, 659.46375pt x 480.79625pt>
 File: figure/fig_whole_part-eps-converted-to.pdf Graphic file (type pdf)
 <use figure/fig_whole_part-eps-converted-to.pdf>
 Package pdftex.def Info: figure/fig_whole_part-eps-converted-to.pdf used on inp
@@ -705,7 +695,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 310.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_path_signatures-eps-converted-to.pdf, id=236, 722.7pt x 516.93124pt
+<figure/fig_path_signatures-eps-converted-to.pdf, id=201, 722.7pt x 516.93124pt
 >
 File: figure/fig_path_signatures-eps-converted-to.pdf Graphic file (type pdf)
  <use figure/fig_path_signatures-eps-converted-to.pdf>
@@ -723,7 +713,7 @@ ed-to.pdf figure/fig_ncc.eps>
 (epstopdf)             \includegraphics on input line 317.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_ncc-eps-converted-to.pdf, id=239, 735.74875pt x 510.90875pt>
+<figure/fig_ncc-eps-converted-to.pdf, id=204, 735.74875pt x 510.90875pt>
 File: figure/fig_ncc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/fig_ncc-eps-converted-to.pdf>
@@ -731,14 +721,13 @@ Package pdftex.def Info: figure/fig_ncc-eps-converted-to.pdf used on input line
  317.
 (pdftex.def)             Requested size: 240.0pt x 166.65924pt.
 
-Overfull \hbox (3.25618pt too wide) detected at line 328
+Overfull \hbox (3.25618pt too wide) detected at line 330
 \OML/ztmcm/m/it/10 E\OT1/ztmcm/m/n/10 (\OML/ztmcm/m/it/10 j; p; W\OT1/ztmcm/m/n
 /10 ) = [] [][]\OML/ztmcm/m/it/10 ;
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+[4 <./figure/fig_curvatureK-eps-converted-to.pdf> <./figure/fig_signatures-eps-
+converted-to.pdf>]
 Package epstopdf Info: Source file: <figure/fig_motion_signatures.eps>
 (epstopdf)                    date: 2018-03-07 11:56:55
 (epstopdf)                    size: 125837 bytes
@@ -748,16 +737,16 @@ Package epstopdf Info: Source file: <figure/fig_motion_signatures.eps>
 (epstopdf)                    size: 63849 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/fig_motion_signatur
 es-eps-converted-to.pdf figure/fig_motion_signatures.eps>
-(epstopdf)             \includegraphics on input line 336.
+(epstopdf)             \includegraphics on input line 338.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_motion_signatures-eps-converted-to.pdf, id=243, 737.75626pt x 523.9
+<figure/fig_motion_signatures-eps-converted-to.pdf, id=247, 737.75626pt x 523.9
 575pt>
 File: figure/fig_motion_signatures-eps-converted-to.pdf Graphic file (type pdf)
 
  <use figure/fig_motion_signatures-eps-converted-to.pdf>
 Package pdftex.def Info: figure/fig_motion_signatures-eps-converted-to.pdf used
- on input line 336.
+ on input line 338.
 (pdftex.def)             Requested size: 240.0pt x 170.44406pt.
 Package epstopdf Info: Source file: <figure/fig_mcc.eps>
 (epstopdf)                    date: 2018-03-07 12:13:51
@@ -767,18 +756,22 @@ Package epstopdf Info: Source file: <figure/fig_mcc.eps>
 (epstopdf)                    size: 45216 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/fig_mcc-eps-convert
 ed-to.pdf figure/fig_mcc.eps>
-(epstopdf)             \includegraphics on input line 343.
+(epstopdf)             \includegraphics on input line 345.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_mcc-eps-converted-to.pdf, id=246, 670.505pt x 486.81876pt>
+<figure/fig_mcc-eps-converted-to.pdf, id=250, 670.505pt x 486.81876pt>
 File: figure/fig_mcc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/fig_mcc-eps-converted-to.pdf>
 Package pdftex.def Info: figure/fig_mcc-eps-converted-to.pdf used on input line
- 343.
+ 345.
 (pdftex.def)             Requested size: 240.0pt x 174.2518pt.
+
+Underfull \vbox (badness 5189) has occurred while \output is active []
+
  [5 <./figure/fig_whole_part-eps-converted-to.pdf> <./figure/fig_path_signature
-s-eps-converted-to.pdf> <./figure/fig_ncc-eps-converted-to.pdf>]
+s-eps-converted-to.pdf> <./figure/fig_ncc-eps-converted-to.pdf> <./figure/fig_m
+otion_signatures-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figure/fig_fourbar.eps>
 (epstopdf)                    date: 2018-02-26 22:44:35
 (epstopdf)                    size: 185173 bytes
@@ -787,15 +780,15 @@ Package epstopdf Info: Source file: <figure/fig_fourbar.eps>
 (epstopdf)                    size: 130681 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/fig_fourbar-eps-con
 verted-to.pdf figure/fig_fourbar.eps>
-(epstopdf)             \includegraphics on input line 366.
+(epstopdf)             \includegraphics on input line 368.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_fourbar-eps-converted-to.pdf, id=302, 279.0425pt x 180.675pt>
+<figure/fig_fourbar-eps-converted-to.pdf, id=317, 279.0425pt x 180.675pt>
 File: figure/fig_fourbar-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/fig_fourbar-eps-converted-to.pdf>
 Package pdftex.def Info: figure/fig_fourbar-eps-converted-to.pdf used on input 
-line 366.
+line 368.
 (pdftex.def)             Requested size: 240.0pt x 155.3995pt.
 Package epstopdf Info: Source file: <figure/fig_sa_coupler_curves.eps>
 (epstopdf)                    date: 2018-03-07 14:19:14
@@ -806,19 +799,17 @@ Package epstopdf Info: Source file: <figure/fig_sa_coupler_curves.eps>
 (epstopdf)                    size: 27639 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/fig_sa_coupler_curv
 es-eps-converted-to.pdf figure/fig_sa_coupler_curves.eps>
-(epstopdf)             \includegraphics on input line 394.
+(epstopdf)             \includegraphics on input line 396.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_sa_coupler_curves-eps-converted-to.pdf, id=311, 603.25375pt x 455.7
+<figure/fig_sa_coupler_curves-eps-converted-to.pdf, id=326, 603.25375pt x 455.7
 025pt>
 File: figure/fig_sa_coupler_curves-eps-converted-to.pdf Graphic file (type pdf)
 
  <use figure/fig_sa_coupler_curves-eps-converted-to.pdf>
 Package pdftex.def Info: figure/fig_sa_coupler_curves-eps-converted-to.pdf used
- on input line 394.
+ on input line 396.
 (pdftex.def)             Requested size: 240.0pt x 181.29732pt.
- [6 <./figure/fig_motion_signatures-eps-converted-to.pdf> <./figure/fig_mcc-eps
--converted-to.pdf> <./figure/fig_fourbar-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figure/fig_sa_distance_function.eps>
 (epstopdf)                    date: 2018-03-05 20:39:26
 (epstopdf)                    size: 1287219 bytes
@@ -828,16 +819,16 @@ ted-to.pdf>
 (epstopdf)                    size: 399918 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/fig_sa_distance_fun
 ction-eps-converted-to.pdf figure/fig_sa_distance_function.eps>
-(epstopdf)             \includegraphics on input line 401.
+(epstopdf)             \includegraphics on input line 403.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_sa_distance_function-eps-converted-to.pdf, id=349, 715.67375pt x 50
+<figure/fig_sa_distance_function-eps-converted-to.pdf, id=327, 715.67375pt x 50
 5.89pt>
 File: figure/fig_sa_distance_function-eps-converted-to.pdf Graphic file (type p
 df)
  <use figure/fig_sa_distance_function-eps-converted-to.pdf>
 Package pdftex.def Info: figure/fig_sa_distance_function-eps-converted-to.pdf u
-sed on input line 401.
+sed on input line 403.
 (pdftex.def)             Requested size: 240.0pt x 169.64595pt.
 Package epstopdf Info: Source file: <figure/fig_sa_motion_signatures.eps>
 (epstopdf)                    date: 2018-03-07 13:16:56
@@ -848,17 +839,19 @@ ted-to.pdf>
 (epstopdf)                    size: 24402 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/fig_sa_motion_signa
 tures-eps-converted-to.pdf figure/fig_sa_motion_signatures.eps>
-(epstopdf)             \includegraphics on input line 408.
+(epstopdf)             \includegraphics on input line 410.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_sa_motion_signatures-eps-converted-to.pdf, id=352, 613.29124pt x 46
+<figure/fig_sa_motion_signatures-eps-converted-to.pdf, id=330, 613.29124pt x 46
 5.74pt>
 File: figure/fig_sa_motion_signatures-eps-converted-to.pdf Graphic file (type p
 df)
  <use figure/fig_sa_motion_signatures-eps-converted-to.pdf>
 Package pdftex.def Info: figure/fig_sa_motion_signatures-eps-converted-to.pdf u
-sed on input line 408.
+sed on input line 410.
 (pdftex.def)             Requested size: 240.0pt x 182.25613pt.
+ [6 <./figure/fig_mcc-eps-converted-to.pdf> <./figure/fig_fourbar-eps-converted
+-to.pdf>]
 Package epstopdf Info: Source file: <figure/fig_logNormal.eps>
 (epstopdf)                    date: 2018-02-26 23:37:12
 (epstopdf)                    size: 32353 bytes
@@ -868,19 +861,21 @@ Package epstopdf Info: Source file: <figure/fig_logNormal.eps>
 (epstopdf)                    size: 13954 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/fig_logNormal-eps-c
 onverted-to.pdf figure/fig_logNormal.eps>
-(epstopdf)             \includegraphics on input line 430.
+(epstopdf)             \includegraphics on input line 432.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_logNormal-eps-converted-to.pdf, id=357, 722.7pt x 505.89pt>
+<figure/fig_logNormal-eps-converted-to.pdf, id=363, 722.7pt x 505.89pt>
 File: figure/fig_logNormal-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/fig_logNormal-eps-converted-to.pdf>
 Package pdftex.def Info: figure/fig_logNormal-eps-converted-to.pdf used on inpu
-t line 430.
+t line 432.
 (pdftex.def)             Requested size: 240.0pt x 168.00174pt.
  [7 <./figure/fig_sa_coupler_curves-eps-converted-to.pdf> <./figure/fig_sa_dist
 ance_function-eps-converted-to.pdf> <./figure/fig_sa_motion_signatures-eps-conv
-erted-to.pdf>]
+erted-to.pdf> <./figure/fig_logNormal-eps-converted-to.pdf>]
+Overfull \vbox (13.58014pt too high) has occurred while \output is active []
+
 Package epstopdf Info: Source file: <figure/fig_auto_encoder.eps>
 (epstopdf)                    date: 2018-03-07 14:52:44
 (epstopdf)                    size: 415881 bytes
@@ -890,17 +885,16 @@ df>
 (epstopdf)                    size: 411843 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/fig_auto_encoder-ep
 s-converted-to.pdf figure/fig_auto_encoder.eps>
-(epstopdf)             \includegraphics on input line 475.
+(epstopdf)             \includegraphics on input line 477.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_auto_encoder-eps-converted-to.pdf, id=412, 438.63875pt x 357.335pt>
+<figure/fig_auto_encoder-eps-converted-to.pdf, id=440, 438.63875pt x 357.335pt>
 File: figure/fig_auto_encoder-eps-converted-to.pdf Graphic file (type pdf)
 <use figure/fig_auto_encoder-eps-converted-to.pdf>
 Package pdftex.def Info: figure/fig_auto_encoder-eps-converted-to.pdf used on i
-nput line 475.
+nput line 477.
 (pdftex.def)             Requested size: 240.0pt x 195.51523pt.
- [8 <./figure/fig_logNormal-eps-converted-to.pdf> <./figure/fig_auto_encoder-ep
-s-converted-to.pdf>]
+ [8 <./figure/fig_auto_encoder-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figure/path_solutions/hip_path.eps>
 (epstopdf)                    date: 2018-03-09 13:24:34
 (epstopdf)                    size: 92329 bytes
@@ -910,16 +904,16 @@ ed-to.pdf>
 (epstopdf)                    size: 92634 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/path_solutions/hip_
 path-eps-converted-to.pdf figure/path_solutions/hip_path.eps>
-(epstopdf)             \includegraphics on input line 537.
+(epstopdf)             \includegraphics on input line 539.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/path_solutions/hip_path-eps-converted-to.pdf, id=460, 299.1175pt x 285.
+<figure/path_solutions/hip_path-eps-converted-to.pdf, id=466, 299.1175pt x 285.
 065pt>
 File: figure/path_solutions/hip_path-eps-converted-to.pdf Graphic file (type pd
 f)
  <use figure/path_solutions/hip_path-eps-converted-to.pdf>
 Package pdftex.def Info: figure/path_solutions/hip_path-eps-converted-to.pdf us
-ed on input line 537.
+ed on input line 539.
 (pdftex.def)             Requested size: 240.0pt x 228.72652pt.
 Package epstopdf Info: Source file: <figure/path_solutions/path_sol1.eps>
 (epstopdf)                    date: 2018-03-09 13:17:38
@@ -930,16 +924,16 @@ ted-to.pdf>
 (epstopdf)                    size: 85415 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/path_solutions/path
 _sol1-eps-converted-to.pdf figure/path_solutions/path_sol1.eps>
-(epstopdf)             \includegraphics on input line 544.
+(epstopdf)             \includegraphics on input line 546.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/path_solutions/path_sol1-eps-converted-to.pdf, id=461, 331.2375pt x 409
+<figure/path_solutions/path_sol1-eps-converted-to.pdf, id=467, 331.2375pt x 409
 .53pt>
 File: figure/path_solutions/path_sol1-eps-converted-to.pdf Graphic file (type p
 df)
  <use figure/path_solutions/path_sol1-eps-converted-to.pdf>
 Package pdftex.def Info: figure/path_solutions/path_sol1-eps-converted-to.pdf u
-sed on input line 544.
+sed on input line 546.
 (pdftex.def)             Requested size: 100.0pt x 123.63481pt.
 Package epstopdf Info: Source file: <figure/path_solutions/path_sol2.eps>
 (epstopdf)                    date: 2018-03-09 18:44:43
@@ -950,16 +944,16 @@ ted-to.pdf>
 (epstopdf)                    size: 18984 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/path_solutions/path
 _sol2-eps-converted-to.pdf figure/path_solutions/path_sol2.eps>
-(epstopdf)             \includegraphics on input line 545.
+(epstopdf)             \includegraphics on input line 547.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/path_solutions/path_sol2-eps-converted-to.pdf, id=462, 182.6825pt x 252
+<figure/path_solutions/path_sol2-eps-converted-to.pdf, id=468, 182.6825pt x 252
 .945pt>
 File: figure/path_solutions/path_sol2-eps-converted-to.pdf Graphic file (type p
 df)
  <use figure/path_solutions/path_sol2-eps-converted-to.pdf>
 Package pdftex.def Info: figure/path_solutions/path_sol2-eps-converted-to.pdf u
-sed on input line 545.
+sed on input line 547.
 (pdftex.def)             Requested size: 60.0pt x 83.07455pt.
 Package epstopdf Info: Source file: <figure/path_solutions/path_sol3.eps>
 (epstopdf)                    date: 2018-03-09 13:18:51
@@ -970,16 +964,16 @@ ted-to.pdf>
 (epstopdf)                    size: 129689 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/path_solutions/path
 _sol3-eps-converted-to.pdf figure/path_solutions/path_sol3.eps>
-(epstopdf)             \includegraphics on input line 546.
+(epstopdf)             \includegraphics on input line 548.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/path_solutions/path_sol3-eps-converted-to.pdf, id=463, 387.4475pt x 466
+<figure/path_solutions/path_sol3-eps-converted-to.pdf, id=469, 387.4475pt x 466
 .74374pt>
 File: figure/path_solutions/path_sol3-eps-converted-to.pdf Graphic file (type p
 df)
  <use figure/path_solutions/path_sol3-eps-converted-to.pdf>
 Package pdftex.def Info: figure/path_solutions/path_sol3-eps-converted-to.pdf u
-sed on input line 546.
+sed on input line 548.
 (pdftex.def)             Requested size: 120.0pt x 144.55374pt.
 Package epstopdf Info: Source file: <figure/path_solutions/path_sol4.eps>
 (epstopdf)                    date: 2018-03-09 13:19:18
@@ -990,16 +984,16 @@ ted-to.pdf>
 (epstopdf)                    size: 107237 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/path_solutions/path
 _sol4-eps-converted-to.pdf figure/path_solutions/path_sol4.eps>
-(epstopdf)             \includegraphics on input line 547.
+(epstopdf)             \includegraphics on input line 549.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/path_solutions/path_sol4-eps-converted-to.pdf, id=464, 387.4475pt x 466
+<figure/path_solutions/path_sol4-eps-converted-to.pdf, id=470, 387.4475pt x 466
 .74374pt>
 File: figure/path_solutions/path_sol4-eps-converted-to.pdf Graphic file (type p
 df)
  <use figure/path_solutions/path_sol4-eps-converted-to.pdf>
 Package pdftex.def Info: figure/path_solutions/path_sol4-eps-converted-to.pdf u
-sed on input line 547.
+sed on input line 549.
 (pdftex.def)             Requested size: 120.0pt x 144.55374pt.
 Package epstopdf Info: Source file: <figure/path_solutions/path_sol5.eps>
 (epstopdf)                    date: 2018-03-09 13:19:52
@@ -1010,16 +1004,16 @@ ted-to.pdf>
 (epstopdf)                    size: 88131 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/path_solutions/path
 _sol5-eps-converted-to.pdf figure/path_solutions/path_sol5.eps>
-(epstopdf)             \includegraphics on input line 548.
+(epstopdf)             \includegraphics on input line 550.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/path_solutions/path_sol5-eps-converted-to.pdf, id=465, 387.4475pt x 466
+<figure/path_solutions/path_sol5-eps-converted-to.pdf, id=471, 387.4475pt x 466
 .74374pt>
 File: figure/path_solutions/path_sol5-eps-converted-to.pdf Graphic file (type p
 df)
  <use figure/path_solutions/path_sol5-eps-converted-to.pdf>
 Package pdftex.def Info: figure/path_solutions/path_sol5-eps-converted-to.pdf u
-sed on input line 548.
+sed on input line 550.
 (pdftex.def)             Requested size: 120.0pt x 144.55374pt.
 Package epstopdf Info: Source file: <figure/path_solutions/path_sol6.eps>
 (epstopdf)                    date: 2018-03-09 13:20:28
@@ -1030,16 +1024,16 @@ ted-to.pdf>
 (epstopdf)                    size: 179414 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/path_solutions/path
 _sol6-eps-converted-to.pdf figure/path_solutions/path_sol6.eps>
-(epstopdf)             \includegraphics on input line 549.
+(epstopdf)             \includegraphics on input line 551.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/path_solutions/path_sol6-eps-converted-to.pdf, id=466, 436.63126pt x 61
+<figure/path_solutions/path_sol6-eps-converted-to.pdf, id=472, 436.63126pt x 61
 7.30624pt>
 File: figure/path_solutions/path_sol6-eps-converted-to.pdf Graphic file (type p
 df)
  <use figure/path_solutions/path_sol6-eps-converted-to.pdf>
 Package pdftex.def Info: figure/path_solutions/path_sol6-eps-converted-to.pdf u
-sed on input line 549.
+sed on input line 551.
 (pdftex.def)             Requested size: 120.0pt x 169.65141pt.
 Package epstopdf Info: Source file: <figure/path_solutions/path_sol7.eps>
 (epstopdf)                    date: 2018-03-09 13:21:02
@@ -1050,16 +1044,16 @@ ted-to.pdf>
 (epstopdf)                    size: 97911 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/path_solutions/path
 _sol7-eps-converted-to.pdf figure/path_solutions/path_sol7.eps>
-(epstopdf)             \includegraphics on input line 550.
+(epstopdf)             \includegraphics on input line 552.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/path_solutions/path_sol7-eps-converted-to.pdf, id=467, 387.4475pt x 466
+<figure/path_solutions/path_sol7-eps-converted-to.pdf, id=473, 387.4475pt x 466
 .74374pt>
 File: figure/path_solutions/path_sol7-eps-converted-to.pdf Graphic file (type p
 df)
  <use figure/path_solutions/path_sol7-eps-converted-to.pdf>
 Package pdftex.def Info: figure/path_solutions/path_sol7-eps-converted-to.pdf u
-sed on input line 550.
+sed on input line 552.
 (pdftex.def)             Requested size: 120.0pt x 144.55374pt.
 Package epstopdf Info: Source file: <figure/path_solutions/path_sol8.eps>
 (epstopdf)                    date: 2018-03-09 13:21:40
@@ -1070,38 +1064,22 @@ ted-to.pdf>
 (epstopdf)                    size: 99052 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/path_solutions/path
 _sol8-eps-converted-to.pdf figure/path_solutions/path_sol8.eps>
-(epstopdf)             \includegraphics on input line 551.
+(epstopdf)             \includegraphics on input line 553.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/path_solutions/path_sol8-eps-converted-to.pdf, id=468, 387.4475pt x 466
+<figure/path_solutions/path_sol8-eps-converted-to.pdf, id=474, 387.4475pt x 466
 .74374pt>
 File: figure/path_solutions/path_sol8-eps-converted-to.pdf Graphic file (type p
 df)
  <use figure/path_solutions/path_sol8-eps-converted-to.pdf>
 Package pdftex.def Info: figure/path_solutions/path_sol8-eps-converted-to.pdf u
-sed on input line 551.
+sed on input line 553.
 (pdftex.def)             Requested size: 120.0pt x 144.55374pt.
 
-Overfull \hbox (28.19804pt too wide) in paragraph at lines 543--553
+Overfull \hbox (28.19804pt too wide) in paragraph at lines 545--555
 [][] 
  []
 
-
-LaTeX Warning: Reference `knnLinkageData' on page 9 undefined on input line 553
-.
-
-
-LaTeX Warning: Reference `knnLinkageData' on page 9 undefined on input line 553
-.
-
-
-LaTeX Warning: Reference `knnLinkageData' on page 9 undefined on input line 568
-.
-
-
-LaTeX Warning: Reference `knnSol4' on page 9 undefined on input line 572.
-
-[9 <./figure/path_solutions/hip_path-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figure/fig_motion_query.eps>
 (epstopdf)                    date: 2018-03-01 23:51:17
 (epstopdf)                    size: 269671 bytes
@@ -1111,14 +1089,14 @@ df>
 (epstopdf)                    size: 247399 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/fig_motion_query-ep
 s-converted-to.pdf figure/fig_motion_query.eps>
-(epstopdf)             \includegraphics on input line 577.
+(epstopdf)             \includegraphics on input line 580.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_motion_query-eps-converted-to.pdf, id=495, 477.785pt x 400.49625pt>
+<figure/fig_motion_query-eps-converted-to.pdf, id=488, 477.785pt x 400.49625pt>
 File: figure/fig_motion_query-eps-converted-to.pdf Graphic file (type pdf)
 <use figure/fig_motion_query-eps-converted-to.pdf>
 Package pdftex.def Info: figure/fig_motion_query-eps-converted-to.pdf used on i
-nput line 577.
+nput line 580.
 (pdftex.def)             Requested size: 240.0pt x 201.17651pt.
 Package epstopdf Info: Source file: <figure/fig_ex_motion_signatures.eps>
 (epstopdf)                    date: 2018-03-06 03:59:41
@@ -1129,16 +1107,16 @@ ted-to.pdf>
 (epstopdf)                    size: 24027 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/fig_ex_motion_signa
 tures-eps-converted-to.pdf figure/fig_ex_motion_signatures.eps>
-(epstopdf)             \includegraphics on input line 584.
+(epstopdf)             \includegraphics on input line 587.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/fig_ex_motion_signatures-eps-converted-to.pdf, id=496, 722.7pt x 505.89
+<figure/fig_ex_motion_signatures-eps-converted-to.pdf, id=489, 722.7pt x 505.89
 pt>
 File: figure/fig_ex_motion_signatures-eps-converted-to.pdf Graphic file (type p
 df)
  <use figure/fig_ex_motion_signatures-eps-converted-to.pdf>
 Package pdftex.def Info: figure/fig_ex_motion_signatures-eps-converted-to.pdf u
-sed on input line 584.
+sed on input line 587.
 (pdftex.def)             Requested size: 240.0pt x 168.00174pt.
 Package epstopdf Info: Source file: <figure/sol1.eps>
 (epstopdf)                    date: 2018-03-07 16:45:18
@@ -1148,15 +1126,15 @@ Package epstopdf Info: Source file: <figure/sol1.eps>
 (epstopdf)                    size: 10207 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/sol1-eps-converted-
 to.pdf figure/sol1.eps>
-(epstopdf)             \includegraphics on input line 629.
+(epstopdf)             \includegraphics on input line 632.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/sol1-eps-converted-to.pdf, id=497, 408.52625pt x 336.25626pt>
+<figure/sol1-eps-converted-to.pdf, id=490, 408.52625pt x 336.25626pt>
 File: figure/sol1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/sol1-eps-converted-to.pdf>
-Package pdftex.def Info: figure/sol1-eps-converted-to.pdf used on input line 62
-9.
+Package pdftex.def Info: figure/sol1-eps-converted-to.pdf used on input line 63
+2.
 (pdftex.def)             Requested size: 120.0pt x 98.76888pt.
 Package epstopdf Info: Source file: <figure/sol2.eps>
 (epstopdf)                    date: 2018-03-07 16:41:42
@@ -1166,15 +1144,15 @@ Package epstopdf Info: Source file: <figure/sol2.eps>
 (epstopdf)                    size: 89700 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/sol2-eps-converted-
 to.pdf figure/sol2.eps>
-(epstopdf)             \includegraphics on input line 630.
+(epstopdf)             \includegraphics on input line 633.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/sol2-eps-converted-to.pdf, id=498, 408.52625pt x 300.12125pt>
+<figure/sol2-eps-converted-to.pdf, id=491, 408.52625pt x 300.12125pt>
 File: figure/sol2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/sol2-eps-converted-to.pdf>
 Package pdftex.def Info: figure/sol2-eps-converted-to.pdf used on input line 63
-0.
+3.
 (pdftex.def)             Requested size: 120.0pt x 88.15489pt.
 Package epstopdf Info: Source file: <figure/sol3.eps>
 (epstopdf)                    date: 2018-03-07 16:38:44
@@ -1184,15 +1162,15 @@ Package epstopdf Info: Source file: <figure/sol3.eps>
 (epstopdf)                    size: 26319 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/sol3-eps-converted-
 to.pdf figure/sol3.eps>
-(epstopdf)             \includegraphics on input line 631.
+(epstopdf)             \includegraphics on input line 634.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/sol3-eps-converted-to.pdf, id=499, 408.52625pt x 307.1475pt>
+<figure/sol3-eps-converted-to.pdf, id=492, 408.52625pt x 307.1475pt>
 File: figure/sol3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/sol3-eps-converted-to.pdf>
 Package pdftex.def Info: figure/sol3-eps-converted-to.pdf used on input line 63
-1.
+4.
 (pdftex.def)             Requested size: 120.0pt x 90.21872pt.
 Package epstopdf Info: Source file: <figure/sol4.eps>
 (epstopdf)                    date: 2018-03-07 16:34:44
@@ -1202,15 +1180,15 @@ Package epstopdf Info: Source file: <figure/sol4.eps>
 (epstopdf)                    size: 39899 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/sol4-eps-converted-
 to.pdf figure/sol4.eps>
-(epstopdf)             \includegraphics on input line 632.
+(epstopdf)             \includegraphics on input line 635.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/sol4-eps-converted-to.pdf, id=500, 406.51875pt x 334.24875pt>
+<figure/sol4-eps-converted-to.pdf, id=493, 406.51875pt x 334.24875pt>
 File: figure/sol4-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/sol4-eps-converted-to.pdf>
 Package pdftex.def Info: figure/sol4-eps-converted-to.pdf used on input line 63
-2.
+5.
 (pdftex.def)             Requested size: 120.0pt x 98.66373pt.
 Package epstopdf Info: Source file: <figure/sol6.eps>
 (epstopdf)                    date: 2018-03-07 16:26:12
@@ -1220,15 +1198,15 @@ Package epstopdf Info: Source file: <figure/sol6.eps>
 (epstopdf)                    size: 117933 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/sol6-eps-converted-
 to.pdf figure/sol6.eps>
-(epstopdf)             \includegraphics on input line 633.
+(epstopdf)             \includegraphics on input line 636.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/sol6-eps-converted-to.pdf, id=501, 462.72874pt x 421.575pt>
+<figure/sol6-eps-converted-to.pdf, id=494, 462.72874pt x 421.575pt>
 File: figure/sol6-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/sol6-eps-converted-to.pdf>
 Package pdftex.def Info: figure/sol6-eps-converted-to.pdf used on input line 63
-3.
+6.
 (pdftex.def)             Requested size: 120.0pt x 109.32387pt.
 Package epstopdf Info: Source file: <figure/sol7.eps>
 (epstopdf)                    date: 2018-03-06 14:33:27
@@ -1238,15 +1216,15 @@ Package epstopdf Info: Source file: <figure/sol7.eps>
 (epstopdf)                    size: 119070 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/sol7-eps-converted-
 to.pdf figure/sol7.eps>
-(epstopdf)             \includegraphics on input line 634.
+(epstopdf)             \includegraphics on input line 637.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/sol7-eps-converted-to.pdf, id=502, 408.52625pt x 363.3575pt>
+<figure/sol7-eps-converted-to.pdf, id=495, 408.52625pt x 363.3575pt>
 File: figure/sol7-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/sol7-eps-converted-to.pdf>
 Package pdftex.def Info: figure/sol7-eps-converted-to.pdf used on input line 63
-4.
+7.
 (pdftex.def)             Requested size: 120.0pt x 106.72934pt.
 Package epstopdf Info: Source file: <figure/sol8.eps>
 (epstopdf)                    date: 2018-03-07 17:03:09
@@ -1256,15 +1234,15 @@ Package epstopdf Info: Source file: <figure/sol8.eps>
 (epstopdf)                    size: 84270 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/sol8-eps-converted-
 to.pdf figure/sol8.eps>
-(epstopdf)             \includegraphics on input line 635.
+(epstopdf)             \includegraphics on input line 638.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/sol8-eps-converted-to.pdf, id=503, 408.52625pt x 300.12125pt>
+<figure/sol8-eps-converted-to.pdf, id=496, 408.52625pt x 300.12125pt>
 File: figure/sol8-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/sol8-eps-converted-to.pdf>
 Package pdftex.def Info: figure/sol8-eps-converted-to.pdf used on input line 63
-5.
+8.
 (pdftex.def)             Requested size: 120.0pt x 88.15489pt.
 Package epstopdf Info: Source file: <figure/sol9.eps>
 (epstopdf)                    date: 2018-03-07 17:15:19
@@ -1274,37 +1252,37 @@ Package epstopdf Info: Source file: <figure/sol9.eps>
 (epstopdf)                    size: 59005 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/sol9-eps-converted-
 to.pdf figure/sol9.eps>
-(epstopdf)             \includegraphics on input line 636.
+(epstopdf)             \includegraphics on input line 639.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/sol9-eps-converted-to.pdf, id=504, 453.695pt x 457.71pt>
+<figure/sol9-eps-converted-to.pdf, id=497, 453.695pt x 457.71pt>
 File: figure/sol9-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/sol9-eps-converted-to.pdf>
 Package pdftex.def Info: figure/sol9-eps-converted-to.pdf used on input line 63
-6.
+9.
 (pdftex.def)             Requested size: 120.0pt x 121.06209pt.
 
-Overfull \hbox (28.19804pt too wide) in paragraph at lines 628--638
+Overfull \hbox (28.19804pt too wide) in paragraph at lines 631--641
 [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10 <./figure/path_solutions/path_sol1-eps-converted-to.pdf> <./figure/path_so
-lutions/path_sol2-eps-converted-to.pdf> <./figure/path_solutions/path_sol3-eps-
-converted-to.pdf> <./figure/path_solutions/path_sol4-eps-converted-to.pdf> <./f
-igure/path_solutions/path_sol5-eps-converted-to.pdf> <./figure/path_solutions/p
-ath_sol6-eps-converted-to.pdf> <./figure/path_solutions/path_sol7-eps-converted
--to.pdf> <./figure/path_solutions/path_sol8-eps-converted-to.pdf> <./figure/fig
-_motion_query-eps-converted-to.pdf> <./figure/fig_ex_motion_signatures-eps-conv
-erted-to.pdf>]
-Underfull \vbox (badness 1152) has occurred while \output is active []
-
-
+ [9 <./figure/path_solutions/hip_path-eps-converted-to.pdf>] [10 <./figure/path
+_solutions/path_sol1-eps-converted-to.pdf> <./figure/path_solutions/path_sol2-e
+ps-converted-to.pdf> <./figure/path_solutions/path_sol3-eps-converted-to.pdf> <
+./figure/path_solutions/path_sol4-eps-converted-to.pdf> <./figure/path_solution
+s/path_sol5-eps-converted-to.pdf> <./figure/path_solutions/path_sol6-eps-conver
+ted-to.pdf> <./figure/path_solutions/path_sol7-eps-converted-to.pdf> <./figure/
+path_solutions/path_sol8-eps-converted-to.pdf> <./figure/fig_motion_query-eps-c
+onverted-to.pdf> <./figure/fig_ex_motion_signatures-eps-converted-to.pdf>]
 (./idetc2018.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 2080) has occurred while \output is active []
 
  [11 <./figure/sol1-eps-converted-to.pdf> <./figure/sol2-eps-converted-to.pdf> 
 <./figure/sol3-eps-converted-to.pdf> <./figure/sol4-eps-converted-to.pdf> <./fi
@@ -1334,40 +1312,32 @@ Underfull \hbox (badness 1215) in paragraph at lines 10--10
 
  []
 
-
-LaTeX Warning: Reference `knnLinkageData' on page 13 undefined on input line 17
-.
-
 )
 \tf@lof=\write5
 \openout5 = `idetc2018.lof'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 664.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 667.
  [13
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 664.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 667.
  (./idetc2018.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 664.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 664.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 667.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 667.
 Package rerunfilecheck Info: File `idetc2018.out' has not changed.
 (rerunfilecheck)             Checksum: 4257C12DD7EBA11AE7AB7E90D1444C5A;856.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 664.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 667.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 8943 strings out of 493014
- 139385 string characters out of 6133351
- 250855 words of memory out of 5000000
- 12163 multiletter control sequences out of 15000+600000
- 63337 words of font info for 119 fonts, out of 8000000 for 9000
+ 8939 strings out of 493014
+ 139343 string characters out of 6133351
+ 255881 words of memory out of 5000000
+ 12160 multiletter control sequences out of 15000+600000
+ 62230 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,15n,39p,484b,2174s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc
@@ -1383,10 +1353,10 @@ s/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/ur
 w/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/u
 tmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on idetc2018.pdf (13 pages, 3678163 bytes).
+Output written on idetc2018.pdf (13 pages, 3678001 bytes).
 PDF statistics:
- 760 PDF objects out of 1000 (max. 8388607)
- 526 compressed objects within 6 object streams
+ 767 PDF objects out of 1000 (max. 8388607)
+ 531 compressed objects within 6 object streams
  120 named destinations out of 1000 (max. 500000)
  267 words of extra memory for PDF output out of 10000 (max. 10000000)
 
