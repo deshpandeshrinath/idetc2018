@@ -34,6 +34,20 @@
 \newcommand{\singleline}{\baselineskip 0pt}
 \newcommand{\expo}[1]{exp$({\bf {#1}})$}
 
+% Subfigure plot
+\makeatletter
+\newcommand{\putindeepbox}[2][0.7\baselineskip]{{%
+    \setbox0=\hbox{#2}%
+    \setbox0=\vbox{\noindent\hsize=\wd0\unhbox0}
+    \@tempdima=\dp0
+    \advance\@tempdima by \ht0
+    \advance\@tempdima by -#1\relax
+    \dp0=\@tempdima
+    \ht0=#1\relax
+    \box0
+}}
+\makeatother
+
 % for displaying argmin command
 \DeclareMathOperator*{\argminA}{arg\,min}
 
@@ -455,66 +469,139 @@ Motion with highest similarity score is returned along with its corresponding li
 \end{figure}
 
 
-\section{Examples}\label{sec_example}
-This sections presents a case study presenting the effectiveness of our approach.
+\section{Case Studies}\label{sec_example}
+This sections presents two case studies presenting the effectiveness of our approach in path and motion synthesis respectively.
+\subsection{Path Generation}
+In the design phase of a rehabilitation device that assists people during sit-to-stand motion, it is required to generate linkages that can execute a sit-to-stand (STS) trajectory of hip as shown in Fig.~\ref{ex1_path}.
+Table~\ref{hipPathTab} presents the discretized path data.
+As our approach requires parametric representation of path, we first fit a cubic B-Spline with cord length parameterization through path data points to generate parametric curve shown in Fig.~\ref{ex1_path}.
+We compute its path signature by the steps mentioned in Algorithm ~\ref{alg_signature} and raise the query for nearest neighbors among 1500 cluster centers of our database.
+The distance metric for finding neighbors is $1-Cn_{max}$ in ~\req{objectiveFunPath}.
+Table~\ref{ex1_knnLinkageData} tabulates the link ratios corresponding to obtained nine nearest neighbors.
+Next step is compute actual parameters according to position, scale and orientation of the path.
+It is done by comparing analogous points found by offset index $j$ in eq.~\ref{nccEq}.
+Figure ~\ref{ex1_solns} shows first eight fourbar mechanisms corresponding to nearest signatures to path signature of input.
+As it can be clearly seen these linkages generate highly accurate paths without any defects throughout sit to stand activity.
+
+\begin{table}
+\caption{Case Study 1 : Path Data}
+\centering
+\label{hipPathTab}
+\begin{tabular}{cccccc}
+\hline
+Point & x & y & Point & x & y \\
+\hline
+1 & -7.81 & -9.65 & 10 & 0.28 & -1.31 \\
+2 & -6.42 & -9.81 & 11 & 0.64 & 1.07 \\
+3 & -5.14 & -9.62 & 12 & 0.98 & 2.73 \\
+4 & -3.72 & -8.99 & 13 & 1.47 & 4.30 \\
+5 & -2.62 & -8.14 & 14 & 2.73 & 6.58 \\
+6 & -1.75 & -7.13 & 15 & 3.46 & 7.41 \\
+7 & -0.91 & -5.67 & 16 & 4.07 & 7.95 \\
+8 & -0.32 & -4.10 & 17 & 4.70 & 8.41 \\
+9 & -0.02 & -2.92 & 18 & 5.32 & 8.76 \\
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption{Linkage Parameters of Nine Nearest Neighbor Paths}
+\centering
+\label{ex1_knnLinkageData}
+\begin{tabular}{ccccccc}
+\hline
+  linkage & $l_1$ & $l_2$ & $l_3$ & $l_4$ & $l_5$ & $1 - Cn_{max}$ \\
+\hline
+ 1 & 0.79 & 2.78 & 1.70 & 1.35 & -0.71 & 0.0011 \\
+ 2 & 1.59 & 1.28 & 0.96 & -1.74 & -1.13 & 0.0015\\
+ 3 & 0.99 & 0.71 & 1.66 & -1.07 & -0.85 & 0.0016\\
+ 4 & 0.51 & 0.48 & 1.11 & -0.02 & -0.15 & 0.0017\\
+ 5 & 0.93 & 0.75 & 2.18 & -1.65 & 0.96 & 0.0018 \\
+ 6 & 1.29 & 1.98 & 1.02 & -1.83 & -1.33 & 0.0019\\
+ 7 & 0.63 & 1.42 & 1.03 & -1.90 & -0.38 & 0.0020\\
+ 8 & 0.66 & 0.85 & 0.84 & -1.40 & -0.13 & 0.0021\\
+ 9 & 1.81 & 0.55 & 1.08 & 0.14 & -0.04 & 0.0022
+\end{tabular}
+\end{table}
+
+\begin{figure}
+\centering
+\includegraphics[width=240pt]{figure/path_solutions/hip_path.eps}
+  \caption{Case Study 1: Path traced by hip joint during Sit-to-Stand Motion.}
+\label{ex1_path}
+\end{figure}
+
+\begin{figure}
+\begin{tabular}{cc}
+  1)\putindeepbox[7pt]{\includegraphics[width=100pt]{figure/path_solutions/path_sol1.eps}}
+    & 2)\putindeepbox[7pt]{\includegraphics[width=60pt]{figure/path_solutions/path_sol2.eps}} \\
+  3)\putindeepbox[7pt]{\includegraphics[width=120pt]{figure/path_solutions/path_sol3.eps}}
+    & 4)\putindeepbox[7pt]{\includegraphics[width=120pt]{figure/path_solutions/path_sol4.eps}}\\
+  5)\putindeepbox[7pt]{\includegraphics[width=120pt]{figure/path_solutions/path_sol5.eps}}
+    & 6)\putindeepbox[7pt]{\includegraphics[width=120pt]{figure/path_solutions/path_sol6.eps}} \\
+  7)\putindeepbox[7pt]{\includegraphics[width=120pt]{figure/path_solutions/path_sol7.eps}}
+    & 8)\putindeepbox[7pt]{\includegraphics[width=120pt]{figure/path_solutions/path_sol8.eps}}\\
+\end{tabular}
+\caption{First 8 Linkages in the table~\ref{knnLinkageData} and their resultant coupler motions.}
+\label{ex1_solns}
+\end{figure}
+
+\subsection{Motion Generation}
 The task is to find a pool of linkage systems that can perform snow-shoveling with a motion shown in Fig.~\ref{motionQuery}.
-The motion data is tabulated in Table ~\ref{poseData} which we fit into a B-spline with arc-length parameterization.
+The motion data is tabulated in Table ~\ref{poseData} which we fit into a B-spline with cord length parameterization.
 The task can be treated as a finite position motion generation and solved for valid solutions.
-We try with our real time computational methods of algebraic fitting\cite{generalfitting-JCISE},\cite{deshpande2017} but the solutions obtained suffer from circuit defect.
+We try with our real time computational methods of algebraic fitting\cite{generalfitting-JCISE},\cite{deshpande2017} but obtained solutions suffer from circuit defect, which is not a surprise as those methods do not account for continuity of the input positions.
+
 Now we employ the approach presented in this paper.
-First step is to calculate motion signature of the task motion.
+First step is to calculate motion signature of the task motion using steps mentioned in Algorithm ~\ref{alg_signature}.
 For that we follow the steps given in section~\ref{sec_sign} to obtain the motion signature depicted in Fig.~\ref{queryResult}.
 Next we raise the signature query for nearest signatures among the cluster centers of the database.
 Fig.\ref{queryResult} shows nine nearest neighbor signatures along with task signature.
 Table ~\ref{knnLinkageData} presents the linkage parameters corresponding to the nearest neighbors along with their distance score from the task.
 Coupler motions of these linkages have a part which matches with the shape of input motion query.
 Actual scaling and orientation of the linkage can be found out easily by comparing analogous points which are given by the offset index $j$ that corresponds to minimum distance$(E_min)$ in eq.~\req{mccEq}.
-Figures~\ref{knnSol1} to \ref{knnSol7} depict the solutions obtained after scaling and orienting the linkage to match required motion.
-Although all of these linkages satisfactorily perform the input task with any defect, linkages except Fig.~\ref{knnSol4}, \ref{knnSol5}, \ref{knnSol6} are suitable for the task considering the pivot locations.
+Figure~\ref{ex2_solns} depict the solutions obtained after scaling and orienting the linkage to match required motion.
+Although all of these linkages satisfactorily perform the input task with any defect, linkages except Fig.~\ref{knnSol4} are suitable for the task considering the pivot locations.
 Nevertheless this approach produces a large variety of solutions which otherwise would have been very hard to found using precision point approach.
 
 \begin{figure}
 \centering
 \includegraphics[width=240pt]{figure/fig_motion_query.eps}
-  \caption{Motion Query : Task Motion drawn specified by user.}
+  \caption{Case Study 2: Task Motion drawn specified by user.}
 \label{motionQuery}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=240pt]{figure/fig_ex_motion_signatures.eps}
-  \caption{Query Result: Motion signatures in the dataset with highest similarity.}
+  \caption{Case Study 2 - Query Result: Motion signatures in the dataset with highest similarity.}
 \label{queryResult}
 \end{figure}
 
 
 \begin{table}
-\caption{Example : Pose Data}
+\caption{Case Study 2: Pose Data}
 \centering
 \label{poseData}
-\begin{tabular}{cccc}
+\begin{tabular}{cccccccc}
 \hline
-Pose & x & y & $\theta$ \\
+%Pose & x & y & $\theta$ \\
+Pose & x & y & $\theta$ & Pose & x & y & $\theta$ \\
 \hline
-1 & 0.03 & 0.07 & 6.06 \\
-2 & 0.38 & 0.01 & 6.18 \\
-3 & 0.71 &-0.00 & 0.04 \\
-4 & 1.02 & 0.06 & 0.22 \\
-5 & 1.26 & 0.22 & 0.46 \\
-6 & 1.39 & 0.47 & 0.73 \\
-7 & 1.36 & 0.77 & 1.03 \\
-8 & 1.18 & 1.06 & 1.36 \\
-9 & 0.88 & 1.27 & 1.74 \\
+1 & 0.03 & 0.07 & 6.06 & 6 & 1.39 & 0.47 & 0.73 \\
+2 & 0.38 & 0.01 & 6.18 & 7 & 1.36 & 0.77 & 1.03 \\
+3 & 0.71 &-0.00 & 0.04 & 8 & 1.18 & 1.06 & 1.36 \\
+4 & 1.02 & 0.06 & 0.22 & 9 & 0.88 & 1.27 & 1.74 \\
+5 & 1.26 & 0.22 & 0.46 & \\
 \end{tabular}
 \end{table}
 
 \begin{table}
-\caption{Linkage Parameters of Five Nearest Neighbor Motions}
+\caption{Case Study 2: Linkage Parameters corresponding to Nine Nearest Neighbor Motions}
 \centering
-\label{knnLinkageData}
+\label{ex2_knnLinkageData}
 \begin{tabular}{ccccccc}
 \hline
-  linkage & $l_1$ & $l_2$ & $l_3$ & $l_4$ & $l_5$ & $f_{obj}$ \\
+  linkage & $l_1$ & $l_2$ & $l_3$ & $l_4$ & $l_5$ & $E_{min}$ \\
 \hline
  1 & 1.28 & 0.88 & 1.77 & -1.32 & 1.79 & 0.0186   \\
  2 & 1.05 & 1.14 & 1.09 & 0.35 & -0.60 & 0.0362   \\
@@ -529,67 +616,20 @@ Pose & x & y & $\theta$ \\
 \end{table}
 
 \begin{figure}
-\centering
-\includegraphics[width=240pt]{figure/sol1.eps}
-  \caption{First Linkage in the table~\ref{knnLinkageData} and its resultant motion.}
-\label{knnSol1}
+\begin{tabular}{cc}
+  1)\putindeepbox[2pt]{\includegraphics[width=120pt]{figure/sol1.eps}}
+    & 2)\putindeepbox[2pt]{\includegraphics[width=120pt]{figure/sol2.eps}} \\
+  3)\putindeepbox[2pt]{\includegraphics[width=120pt]{figure/sol3.eps}}
+    & 4)\putindeepbox[2pt]{\includegraphics[width=120pt]{figure/sol4.eps}}\\
+  5)\putindeepbox[2pt]{\includegraphics[width=120pt]{figure/sol6.eps}}
+    & 6)\putindeepbox[2pt]{\includegraphics[width=120pt]{figure/sol7.eps}} \\
+  7)\putindeepbox[2pt]{\includegraphics[width=120pt]{figure/sol8.eps}}
+    & 8)\putindeepbox[2pt]{\includegraphics[width=120pt]{figure/sol9.eps}}\\
+\end{tabular}
+\caption{Case Study 2: First 8 Linkages in the table~\ref{ex2_knnLinkageData} and their resultant coupler motions.}
+\label{ex2_solns}
 \end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[width=240pt]{figure/sol2.eps}
-  \caption{Second Linkage in the table~\ref{knnLinkageData} and its resultant motion.}
-\label{knnSol2}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=240pt]{figure/sol3.eps}
-  \caption{Third Linkage in the table~\ref{knnLinkageData} and its resultant motion.}
-\label{knnSol3}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=240pt]{figure/sol4.eps}
-  \caption{Fourth Linkage in the table~\ref{knnLinkageData} and its resultant motion.}
-\label{knnSol4}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=200pt]{figure/sol5.eps}
-  \caption{Fifth Linkage in the table~\ref{knnLinkageData} and its resultant motion.}
-\label{knnSol5}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=240pt]{figure/sol6.eps}
-  \caption{Sixth Linkage in the table~\ref{knnLinkageData} and its resultant motion.}
-\label{knnSol6}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=240pt]{figure/sol7.eps}
-  \caption{Seventh Linkage in the table~\ref{knnLinkageData} and its resultant motion.}
-\label{knnSol7}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=240pt]{figure/sol8.eps}
-  \caption{Eighth Linkage in the table~\ref{knnLinkageData} and its resultant motion.}
-\label{knnSol8}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=240pt]{figure/sol9.eps}
-  \caption{Ninth Linkage in the table~\ref{knnLinkageData} and its resultant motion.}
-\label{knnSol9}
-\end{figure}
 
 \section*{Conclusion}
 This approach presents a novel optimization approach towards defect free linkage synthesis.
