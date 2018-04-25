@@ -75,24 +75,25 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 The past forty years of research in mechanism synthesis has witnessed an unprecedented volume of work in formulating and solving planar four-bar linkage synthesis problems.
-However, finding practical and useful mechanisms for the motion synthesis problem has proven to be elusive as a large majority of mechanisms turn out to be defective with respect to their assembly modes.
-Most methods formulate the problem as a discrete precision position problem, which inherently ignores the continuity information in the input, resulting into linkages with branch-, circuit- and order-defects.
+However, finding practical and useful mechanisms for the motion synthesis problem has proven to be elusive, as a large majority of mechanisms turn out to be defective with respect to their assembly modes.
+Most methods formulate the problem as a discrete precision position problem, which inherently ignores the continuity information in the input, resulting in linkages with branch-, circuit- and order-defects.
 In this paper, we bring together diverse fields of pattern recognition, machine learning, artificial neural network, and computational kinematics to present a novel approach that solves this problem both efficiently and effectively.
 At the heart of this approach lies an objective function that compares the motion as a whole thereby capturing designer's intent.
-In contrast to widely used structural error or loop-closure equation based error functions which convolute the optimization by considering shape, size, position and orientation simultaneously, this objective function computes motion difference in a form invariant to similarity transformations.
+In contrast to widely used structural error or loop-closure equation based error functions which convolute the optimization by considering shape, size, position, and orientation simultaneously, this objective function computes motion difference in a form, which is invariant to similarity transformations.
 We employ auto-encoder neural networks to create a compact and clustered database of invariant motions of known linkages.
 The query is raised in the database for nearest neighbors, which are either solutions or good initial conditions for fast local optimization techniques.
-In spite of highly non-linear parameters space, our approach discovers a wide pool of defect free solutions very quickly.
+In spite of highly non-linear parameters space, our approach discovers a wide pool of defect-free solutions very quickly.
 We show that by employing proven machine learning techniques, this work could have far-reaching consequences to creating a multitude of useful and creative conceptual design solutions for mechanism synthesis problems, which go beyond planar four-bar linkages.
 
-\textbf{keywords}: \emph{Machine Learning, Artificial Neural Network (ANN), Path Synthesis, Motion Synthesis, Planar Four-bar linkage, Type and Dimensional Synthesis, Circuit- Order-, and Branch-Defect}
+\textbf{keywords}: \emph{Machine Learning, Artificial Neural Network (ANN), Path Synthesis, Motion Synthesis, Planar Four-bar linkage, Circuit- Order-, and Branch-Defect}
 
 \end{abstract}
 
 \section{Introduction}
-Classical mechanism synthesis problem deals with computing type and dimensions of linkage system for performing specific tasks, which are categorized as path, motion and function generation; for an exhaustive reference see  books from such McCarthy and Soh \cite{sohmccarthy}, Sandor and Erdman~\cite{Sandor}, Hunt \cite{Hunt78}, Hartenberg and Denavit \cite{Hartenberg},  Suh and Radcliffe \cite{Suh78}, and Lohse \cite{lohse2013}.
-Various approaches have been proposed in the literature with the aim of finding acceptable solutions for practical situations.
-However, the majority of the approaches do not account for circuit and branch defect in the synthesis process, which can render the solution useless for practical applications.These defects in single degree of freedom mechanisms are thoroughly discussed by Chase and Mirth\cite{chasemirth}.
+Classical mechanism synthesis problem deals with computing type and dimensions of linkage system for performing specific tasks, which are categorized as path, motion and function generation; for an exhaustive reference, see books from McCarthy and Soh \cite{sohmccarthy}, Sandor and Erdman~\cite{Sandor}, Hunt \cite{Hunt78}, Hartenberg and Denavit \cite{Hartenberg},  Suh and Radcliffe \cite{Suh78}, and Lohse \cite{lohse2013}.
+Various approaches have been proposed in the literature with aim of finding acceptable solutions for practical situations.
+However, the majority of the approaches do not account for circuit and branch defect in the synthesis process, which can render the solution useless for practical applications.
+These defects in the single degree of freedom mechanisms are thoroughly discussed by Chase and Mirth\cite{chasemirth}.
 
 \begin{figure*}
 \centering
@@ -101,37 +102,40 @@ However, the majority of the approaches do not account for circuit and branch de
 \label{overallMethod}
 \end{figure*}
 
-In this paper, we 1) employ pattern recognition and computational shape analysis to create a similarity transforms-independent signature for the path and motion, 2) exploit the non-linear nature of relationship between the linkage parameters and the coupler motions to create a sensitive, wide-ranging, compact, and efficient database with hierarchical clustering, and 3) enable dimensionality reduction using Auto-encoder Neural Networks.
+In this paper, we 1) employ pattern recognition and computational shape analysis, to create a similarity transforms-independent signature for coupler path and motion, 2) exploit the non-linear nature of relationship between the linkage parameters and coupler motions to create a sensitive, wide-ranging, compact, and efficient database with hierarchical clustering, and 3) enable dimensionality reduction using Auto-encoder Neural Networks.
 When a user inputs a motion or a path, a query representing invariant signature \footnote{path or motion signature} of the input is raised for $k$ nearest neighbors among cluster centers in the database.
-The neighbor is defined as motion or path whose part has a similar signature to the input.
-These $k$ neighbors, if needed, are subjected to fine tuning by local optimization to obtain set of defect-free solutions.
-We define a novel objective function for defect-free motion generation problems and a novel algorithm for partial matching of motions.
+These $k$ neighbors, if needed, are subjected to fine-tuning by local optimization to obtain a set of defect-free solutions.
+We define a novel objective function for defect-free motion generation problems and present an algorithm for partial matching of motions.
 The objective function that drives the synthesis process computes a distance measure of dissimilarity between the task motion and the coupler motion generated by current linkage parameters.
-This distance measure of dissimilarity inherently requires continuity of motion, thus ensuring that the output mechanism is defect free throughout the task.
+This distance measure of dissimilarity inherently requires continuity of motion, thus ensuring that the output mechanism is defect-free throughout the task.
 The Fig.~\ref{overallMethod} illustrates an overview of our method, which is codified in Algorithm~\ref{alg_overall}.
 
-Path synthesis methods based on Fourier analysis do take the continuity information of the coupler path into account; however most of them are defined only for closed loop curves.
-Ullah and Kota\cite{ullah1997} have presented an invariant approach towards representation and synthesis of closed paths through shape optimization. They use a combination of global and local search methods by optimizing Fourier Deviant function to compute the dimensions of planar four bar linkages without any initial guesses.
-Wu et al.\cite{wu2011} presented a method for open and closed path generation based on finite Fourier series. In the case of motion generation, methods that take the branching defect into consideration limit their search in the configuration space where Grashof condition holds true. To the best of our knowledge, no motion generation methods truly take the motion continuity into account.
+Path synthesis methods based on Fourier analysis do take continuity information of the coupler path into account, however, most of them are defined only for closed loop curves.
+Ullah and Kota\cite{ullah1997} have presented an invariant approach towards representation and synthesis of closed loop paths through shape optimization.
+They use a combination of global and local search methods for optimizing Fourier Deviant function, to compute the dimensions of planar four-bar linkages without an initial guess.
+Wu et al.\cite{wu2011} presented a method for open and closed path generation based on finite Fourier series.
+In the case of motion generation, Li et al.\cite{li2016} have developed a Fourier descriptor-based approach for approximate motion generation.
 
-Due to the highly nonlinear nature of the problem, most optimization based methods require a good initial condition to start. Thus, an atlas or a design library is used to provide good initial conditions.
-McGarva\cite{mcgarva1994} took the earliest approach towards creating a library for coupler trajectories based on harmonic analysis.
-Wandling\cite{wandling2000} has presented an atlas based approach, where coupler paths and motions are stored in terms of Fourier Transforms.
+Due to highly nonlinear nature of the problem, most optimization based methods require a good initial condition to start.
+Thus, an atlas or a design library is used to provide good initial conditions.
+McGarva\cite{mcgarva1994} took the earliest approach towards creating a library for coupler trajectories based on a harmonic analysis.
+Wandling\cite{wandling2000} has presented an atlas-based approach, where coupler paths and motions are stored in terms of Fourier Transforms.
 Input motion is searched for neighbors based on Euclidean distances of Fourier Transforms.
 Yue et al.\cite{yue-pathgen2011} presented a similar approach of path generation using P-Type Fourier Descriptor applicable for open curves.
 In their approach, a task curve is transformed into normalized Fourier coefficients and queried for the nearest neighbor search.
-The best match is returned as a solution to input. Chu et al.\cite{chu2010} presented an atlas based method for synthesizing spatial four bar linkages for function generation problems where orientation data is stored in terms of Fourier descriptors.
+The best match is returned as the solution to input.
+Chu et al.\cite{chu2010} presented an atlas-based method for synthesizing spatial four-bar linkages for function generation problems, where orientation data is stored in terms of Fourier descriptors.
 
 The above methods generate data based on uniform sampling in the linkage parameter space.
-Given the highly nonlinear mapping between linkage parameters and coupler trajectory, this way of sampling leads to non-uniform sampling of trajectory space causing under-representation of possible motions.
+Given highly nonlinear mapping between linkage parameters and coupler trajectory, this way of sampling leads to a non-uniform sampling of trajectory space causing under-representation of possible motions.
 We address this issue by employing log-normal distribution in the linkage parameter space to generate data and perform compact clustering of the data using machine learning techniques.
-A hierarchy is created in the database by means of clustering, where the top level comprises of data points called cluster centers, which are representative of the cluster points in the lower levels.
+Hierarchy is created in the database by means of clustering, where the top level comprises of data points called cluster centers, which are representative of the cluster points in lower levels.
 Wandling~\cite{wandling2000} and Yu et al.~\cite{yue-pathgen2011} have built libraries with all possible coupler curves, where one curve is broken down into many segments for creating data for partial curves.
 In contrast to this, we need to store only one curve representing all the segments in it as our representation facilitates partial matching.
-No other previous methods facilitate this partial matching of open motion curve into another open or closed curve. This reduces the data requirement even further.
+None of the other previous methods facilitate this partial matching of open motion curve into another open or closed curve, which significantly contributes to providing a large number of solutions, and reduces the data requirement even further.
 
 Rest of this paper is organized as follows. Section~\ref{sec_sign} presents the computation of motion and path signatures.
-Section~\ref{sec_distanceMetric} is comprised of evaluation criterion for two signatures based on the shape similarity, which leads to a formulation of the error function for optimization.
+Section~\ref{sec_distanceMetric} is comprised of evaluation criterion for signatures based on the shape similarity, which leads to the formulation of error function for optimization.
 Section~\ref{sec_SA} discusses the nature of objective function via sensitivity analysis at a singularity.
 Section~\ref{sec_db_ae} presents the database generation and clustering using auto-encoders for efficient sampling and query operations.
 Finally, two case studies are presented in section~\ref{sec_example} to illustrate the efficiency and efficacy of the method.
@@ -165,23 +169,24 @@ Finally, two case studies are presented in section~\ref{sec_example} to illustra
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Signatures of Coupler Path and Motion}\label{sec_sign}
-The focus of the paper is on a novel method for motion generation that takes a continuous task motion or path as the input and returns defect-free linkages producing similar motion or path. The objective function evaluation requires the input motion to be transformed into a specific form, which we call the signature of input motion.
-This signature representation should be invariant to similarity operations, viz. reflection, rotation, translation and scaling.
+Focus of the paper is on a novel method for motion generation that takes a parametric motion $(x:x(t), y:y(t), \theta:\theta(t))$ or path $(x:x(t), y:y(t))$ as the input and returns defect-free linkages producing similar motion or path.
+The input is transformed into a representation, termed as a signature, which is invariant to similarity operations, viz. reflection, rotation, translation, and scaling.
 Signatures for path and motion are termed as path signature and motion signature, respectively.
 For calculating path signature, we use formulations developed by Cui et.al\cite{cui2009}.
-For this task, our approach requires the input in terms of a parametric motion $(x:x(t), y:y(t), \theta:\theta(t))$.
 
+Consider a motion given in parametric form as, $x:x(t), y:y(t), \theta:\theta(t)$.
+Here, $\theta(t)$ represents the change in orientation along the path, measured with respect to initial orientation and is not restricted in the domain $[-\pi, \pi]$.
 
-Curvature $k(t)$ of the path of a parametric motion $(x:x(t), y:y(t), \theta:\theta(t))$ and its integral $K(t)$ is given by,
+Curvature $\kappa(t)$ of the path $(x:x(t), y:y(t))$ and its integral $K(t)$ is given by,
 \begin{eqnarray}
-  k(t) = \frac{\ddot{y}(t)\dot{x}(t) - \ddot{x}(t)\dot{y}(t)}{{(\dot{x}^2(t) + \dot{y}^2(t))}^{(\frac 32)}}, \label{curvatureEq}\\
-  K(t) = \int^{t}_0 |k(t)|dt \label{kInt},
+  \kappa(t) = \frac{\ddot{y}(t)\dot{x}(t) - \ddot{x}(t)\dot{y}(t)}{{(\dot{x}^2(t) + \dot{y}^2(t))}^{(\frac 32)}}, \label{curvatureEq}\\
+  K(t) = \int^{t}_0 |\kappa(t)|dt \label{kInt},
 \end{eqnarray}
-where $\dot{x}$, $\ddot{x}(t)$ are first and second order derivative with respect to parameter $t$.
-As an example, the parametric motion could be a B-spline motion as shown in Fig~\ref{bsplineFitting} or it could be a discrete set of poses, which could be represented by a continuous signal using Fourier series.
-We compute the curvature of path along the direction of $t$, using Eq.~\req{curvatureEq} and the cumulative integral by Eq.~\req{kInt}.
+where $\dot{x}(t)$, $\ddot{x}(t)$ are first and second order derivative with respect to parameter $t$.
+As an example, the parametric motion could be a B-spline motion as shown in Fig~\ref{bsplineFitting}.
+We compute $\kappa(t)$ and $K(t)$ along the direction of $t$, using Eq.~\req{curvatureEq} and Eq.~\req{kInt} respectively.
 Figure~\ref{curvatureK} shows computed curvature and its unsigned integral of the coupler path shown in Fig.~\ref{bsplineFitting}.
-It can be seen that curvature is small start, increases as the curve bends along the path and drops once again as the path straightens out. It is obvious that curvature plot will reverse if the direction of parameterizations reverses, while the integral is a monotonically increasing function.
+It can be seen that curvature is small at the start, increases as the curve bends along the path and drops once again as the path straightens out. It is obvious that curvature plot will reverse if the direction of parameterizations reverses, while the integral is a monotonically increasing function.
 
 \begin{figure}
 \centering
@@ -197,15 +202,16 @@ It can be seen that curvature is small start, increases as the curve bends along
 \label{curvatureK}
 \end{figure}
 
-Now, we re-sample the curvature at equal intervals of $K(t)$, which is equivalent to plotting $k$ vs $K$ in Fig~\ref{signature}(a).
+Now, we re-sample the curvature at equal intervals of $K(t)$, which is equivalent to plotting $\kappa$ vs $K$ in Fig~\ref{signature}(a).
 This is done by finding the parameter values of $t$ where $K$ changes uniformly.
-For practical purposes, we find an array of parameter $t$ such that $K$ increments by 0.1.
-For each value of $t$ in the array, we compute $k(K)$ and $\theta(K)$ and store it as the path and motion signatures respectively. We note that there is a one-to-one mapping between $t$ and $K$.
+For practical purposes, we find an array of the parameter $t$ such that $K$ increments by 0.1.
+For each value of $t$ in that array, we compute $\kappa(K)$ and $\theta(K)$ and store it as the path and motion signatures respectively.
+We note that there is a one-to-one mapping between $t$ and $K$.
 
 These signatures are invariant under similarity transformations; for proof see\cite{cui2009}.
-We know that curvature changes inversely to the scale of the curve, so when it is integrated along the scaled curve, the scale factor cancels itself out. Reflection operation on the motion or the path, produces flipped path signature, but motion signature remains invariant.
-
-Figure~\ref{signature} shows path and motion signature obtained for the motion depicted in Fig.~\ref{bsplineFitting}. It is important to note that signature depends on the direction along which we compute the curvature $k(t)$ as well as re-sample $\theta(t)$.
+We know that curvature changes inversely to scale of the curve, so when it is integrated along the scaled curve, the scale factor cancels itself out. Reflection operation produces flipped path signature, but motion signature remains invariant.
+Figure~\ref{signature} shows path and motion signature obtained for the motion depicted in Fig.~\ref{bsplineFitting}. It is important to note, that the signature depends on the direction of parameter t, as shown in Fig~\ref{bsplineFitting}.
+The procedure of signature calculation presented in this section is given in Algorithm ~\ref{alg_signature}.
 
 \begin{figure}
 \centering
@@ -214,23 +220,22 @@ Figure~\ref{signature} shows path and motion signature obtained for the motion d
 \label{signature}
 \end{figure}
 
-The procedure of signature calculation presented in this section is given in Algorithm ~\ref{alg_signature}.
 
 \begin{algorithm}
     \SetKwInOut{Input}{Input}
     \SetKwInOut{Output}{Output}
     \Input{Twice Differentiable Parametric Representation of Motion $(x:x(t), y:y(t), \theta:\theta(t))$}
     \Output{signature //discretized signal in form of an array}
-    $k(t)$ = ComputeCurvature$(x, y)$ using Eq.~\ref{curvatureEq} \\
-    $K(t)$ = IntergrateCumulatively($k(t)$) using Eq.~\ref{kInt} \\
+    $\kappa(t)$ = ComputeCurvature$(x, y)$ using Eq.~\ref{curvatureEq} \\
+    $K(t)$ = IntergrateCumulatively($\kappa(t)$) using Eq.~\ref{kInt} \\
     motionSignature = [] \\
     pathSignature = [] \\
     \For{$i = 0 \to max(K)$}
     {
       $tmp$ = (value of $t$ corresponding to which $K$ has value $i$) \\
       $i = i + 0.1$ \\
-      motionSignature.push($k$($tmp$)) \\
-      pathSignature.push($k$($tmp$))
+      motionSignature.push($\kappa$($tmp$)) \\
+      pathSignature.push($\kappa$($tmp$))
     }
     \Return{PathSignature, MotionSignature}
     \caption{Calculate Invariant Signatures}
@@ -238,35 +243,36 @@ The procedure of signature calculation presented in this section is given in Alg
 \end{algorithm}
 
 \section{Signature Matching and Error Function}\label{sec_distanceMetric}
-The signatures obtained in the previous steps contain important information about shape of the trajectory.
-In this section, we formulate functions that evaluate the similarity (or, distance) between two trajectories based on their signatures.
+The signatures obtained in previous steps contain important information about the shape of the trajectory.
+In this section, we formulate functions that evaluate the similarity between two trajectories based on their signatures.
 These distance functions can be used as error metric, which can be minimized using optimization methods.
 
 \subsection{Partial Matching of Path Signatures}\label{sec_ncc}
-When a path query is raised, it can be very useful to know whether this path already exists as a part in some other path present in the database.
+When a path query is raised, it can be very useful to know whether this path matches with the part of a path from the database.
 This subsection presents a method for determining this partial similarity.
 
-Let us consider two coupler paths; namely part and whole as shown in~\ref{wholePart}.
-Let $p$ be path signature of the part path which acts as a template, while $W$ is path signature of the whole path that can completely embed the template as shown in Fig.~\ref{pathSignature}. The orientation information shown in Fig.~\ref{wholePart} is ignored for path matching. It will be used later for matching of motion signature.
+Let us consider two coupler paths; namely \emph{Part} and \emph{Whole} as shown in~\ref{wholePart}.
+Let $p$ and $W$ be their signatures respectively, where $W$ completely contains $p$ as shown in Fig.~\ref{pathSignature}.
+The orientation information shown in Fig.~\ref{wholePart} is ignored for path matching. It will be used later for matching of motion signatures.
 The partial matching works as follows:
 
 \begin{enumerate}
   \item $p$ and $W$ are expressed in terms of arrays and $W$ must contain more points than $p$.
-  \item The template $p$ is slid with offset index $j$ along $W$.
-  \item For each offset $j$, we compute normalized cross-correlation function given by,
+  \item $p$ is slid with offset index $j$ along $W$.
+  \item For each offset $j$, we compute normalized cross-correlation\cite{lewis1995fast} function given by,
 \end{enumerate}
 \vspace{-0.6cm}
 \begin{equation}\label{nccEq}
-  Cn(j, p, W) = |\sum_{i}^{p_{span}} \frac{(W(i+j) - \bar{W}(j\to j + p_{span}))(p(i) - \bar{p})}{\sqrt{\sum_{i}^{p_{span}}{(W(i+j) - \bar{W}_{p_{span}})}^2\sum_{i}^{p_{span}}{(p(i) - \bar{p})}^2}} |,
+  Cn(j, p, W) = |\sum_{i}^{p_{span}} \frac{(W(i+j) - \bar{W}(j : j + p_{span}))(p(i) - \bar{p})}{\sqrt{\sum_{i}^{p_{span}}{(W(i+j) - \bar{W}_{p_{span}})}^2\sum_{i}^{p_{span}}{(p(i) - \bar{p})}^2}} |,
 \end{equation}
-where $Cn(j, p, W)$ is the normalized cross-correlation value when template $p$ is matched against $W$ at $j^{th}$ index; $p_{span}$ is the length of the array $p$ and $\bar{W}(j\to j + p_{span})$ is the mean for the values of array $W$ between index range of ($j, j+p_{span}$).
+where $Cn(j, p, W)$ is the normalized cross-correlation value when $p$ is matched against $W$ at $j^{th}$ index; $p_{span}$ is length of the array $p$ and $\bar{W}(j:j + p_{span})$ is mean of the values of array $W$ between index range of ($j, j+p_{span}$).
 
-Here, $p$ acts as a template that tries to find best match against $W$ while sliding over it along $j$.
-Domain of $Cn(j, p, W)$ is [0, 1], where 1 represents the complete embedment.
+Here, $p$ acts as a template that tries to find the best match against $W$ while sliding over it along $j$.
+Domain of $Cn(j, p, W)$ is [0, 1], where 1 represents the complete embedment of $p$ inside $W$.
 
-Maximum score of the matching $Cn_{max}(p, W)$ represents similarity of the template in $W$, and offset index $j$ at which maximum occurs is the start point for matching.
-As the signature reverses with reversal of the direction of sampling, we compute the correlation first in one direction and again after reversing $p$ and select the best matching score, offset index and the matching direction of sampling.
-Figure~\ref{ncc} depicts normalized cross correlation function over the sliding domain $j$ for part and whole curves.
+The maximum score of the matching $Cn_{max}(p, W)$ represents similarity of the template in $W$, and offset index $j$ at which maximum occurs is the start point for matching.
+As we know that the signature reverses with reversal of the direction of $t$, we compute the correlation along both directions and select the best matching score, offset index and the matching direction of sampling.
+Figure~\ref{ncc} depicts normalized cross correlation function over the sliding domain $j$ for \emph{Part} and \emph{Whole} curves.
 
 \begin{figure}
 \centering
@@ -278,7 +284,7 @@ Figure~\ref{ncc} depicts normalized cross correlation function over the sliding 
 \begin{figure}
 \centering
 \includegraphics[width=240pt]{figure/fig_path_signatures.eps}
-  \caption{Path Signatures of part $p$ and whole $W$ from Fig.~\ref{wholePart}. The array index $i$ corresponds to the index location for the array of the $K$. The domain of path signature is scale invariant but the range still has a scaling factor, which is taken care of by normalized cross-correlation.}
+  \caption{Path Signatures of part $p$ and whole $W$ from Fig.~\ref{wholePart}. The array index $i$ corresponds to the index location for the array of the $K$. The domain of path signature is scale-invariant but the range still has a scaling factor, which is taken care of by normalized cross-correlation.}
 \label{pathSignature}
 \end{figure}
 
@@ -291,17 +297,17 @@ Figure~\ref{ncc} depicts normalized cross correlation function over the sliding 
 
 \subsection{Partial Matching of Motion Signatures}\label{sec_mcc}
 This section presents how a template motion can be checked against other motion for potential matching.
-Consider part and whole motions shown in Fig.~\ref{wholePart}.
-Let $p$ and $W$ be the motion signatures of part and whole motions, respectively as shown in Fig.~\ref{motionSignature}.
-Similar to the partial matching of path signature, the cross-correlation function is given by,
+Consider \emph{Part} and \emph{Whole} motions shown in Fig.~\ref{wholePart}.
+Let $p$ and $W$ be the motion signatures of the \emph{Part} and \emph{Whole} motions, respectively as shown in Fig.~\ref{motionSignature}.
+Similar to partial matching of path signatures, the cross-correlation function is given by,
 
 \begin{equation}\label{mccEq}
-  E(j, p, W) = \sum_{i}^{p_{span}} {((W(i+j) - \bar{W}(j\to j + p_{span})) - (p(i) - \bar{p}))}^2,
+  E(j, p, W) = \sum_{i}^{p_{span}} {((W(i+j) - \bar{W}(j: j + p_{span})) - (p(i) - \bar{p}))}^2,
 \end{equation}
-where $E(j, p, W)$ is the dissimilarity value when template $p$ is matched to $W$ at $j^{th}$ index. Here $p$ tries to find best match against $W(i)$ while sliding over it.
-Similar to path signature, motion signature is dependent on the sampling direction along the motion. Thus, we compute the dissimilarity for both direction and choose whichever is the least i.e. $E_{min}(p, W)$.
+where $E(j, p, W)$ is the dissimilarity value when template $p$ is matched to $W$ at $j^{th}$ index. Here $p$ tries to find the best match against $W(i)$ while sliding over it.
+Similar to path signature, motion signature is dependent on the direction of $t$. Thus, we compute the dissimilarity for both directions and choose whichever is the least i.e. $E_{min}(p, W)$.
 Figure~\ref{mcc} depicts dissimilarity function over the sliding domain $j$.
-In this case, as shown in Fig.~\ref{mcc}, we find that the first point itself is a point where the perfect match occurs, which is consistent with the fact that we have essentially sliced the whole motion to obtain the part motion.
+In this case, as shown in Fig.~\ref{mcc}, we find that the first point is the matching point, which is consistent with the fact that we have essentially sliced the whole motion to obtain the part motion.
 
 \begin{figure}
 \centering
@@ -313,12 +319,12 @@ In this case, as shown in Fig.~\ref{mcc}, we find that the first point itself is
 \begin{figure}
 \centering
 \includegraphics[width=240pt]{figure/fig_mcc.eps}
-  \caption{Dissimilarity function of two motion signatures along both directions. It can be seen that exact match is found at $j=0$, where template is fully embedded inside the other motion.}
+  \caption{Dissimilarity function of two motion signatures along both directions. It can be seen that exact match is found at $j=0$, where the template is fully embedded inside the other motion.}
 \label{mcc}
 \end{figure}
 
 \subsection{Objective Function for Synthesis}
-The functions in Eq.~\req{nccEq} and ~\req{mccEq} presented in the sections \ref{sec_ncc}, \ref{sec_mcc} can be used as the error measure for path and motion synthesis of any planar linkage, where the objective is to find a linkage that produces a motion whose part or whole corresponds to target motion (or path).
+The functions in Eq.~\req{nccEq} and ~\req{mccEq} presented in the sections \ref{sec_ncc}, \ref{sec_mcc} can be used as the error measure for path and motion synthesis of any planar linkage, where the objective is to find a linkage that produces a motion whose part or whole corresponds to the target motion (or path).
 Thus we can formulate the path synthesis problem as,
 
 \begin{equation}\label{objectiveFunPath}
@@ -336,35 +342,36 @@ Here, $E$ is the Dissimilarity function from Eq.~\req{mccEq} while $p$ and ${\{W
 \begin{figure}
 \centering
 \includegraphics[width=270pt]{figure/fig_fourbar.eps}
-  \caption{Parametric representation of four-bar linkage with all revolute joints. We set $l_0 = 1$ and one fixed joint at origin of the global frame along with making fixed length of the four bar parallel to x axis.}
+  \caption{Parametric representation of four-bar linkage with all revolute joints. We set $l_0 = 1$ and one fixed joint at the origin of the global frame along with making the fixed length of four-bar parallel to the x-axis.}
 \label{fourbar}
 \end{figure}
 
 Objective function evaluation step consists of calculation of coupler motion or path and finding its dissimilarity score.
-It is important to note that representation obtained in Section~\ref{sec_sign} reduces size of the linkage parameters in optimization.
+It is important to note that representation obtained in Section~\ref{sec_sign} reduces the size of the linkage parameters in optimization.
 This optimization problem can be solved using search methods which do not require gradient computation.
-We can employ global optimization methods such as differential evolution at the start and local optimization methods link Powell's method towards the end for faster convergence\cite{ullah1997}.
+We can employ global optimization methods such as differential evolution at the start, and local optimization methods link Powell's method towards the end for faster convergence\cite{ullah1997}.
 %Section~\ref{examples} presents results for the optimization technique used.
 
-Considering highly non-linear nature of the problem, finding a good initial guess proves to be daunting. Thus, we exploit machine learning techniques to create a database for finding many good initial guesses or the solution itself.
+Considering highly non-linear nature of the problem, finding a good initial guess proves to be daunting.
+Thus, we exploit machine learning techniques to create a database for finding many good initial guesses or the solution itself.
 
 \section{Sensitivity Analysis of Signatures}\label{sec_SA}
 Due to the complex relationship between parameter space and generated motion, small changes in linkage parameters can produce large and discontinuous structural changes in the generated motions.
-For example, a small change in crank length ($l_1$) can open a previously close coupler path.
-Most of the methods based on Fourier descriptors can not capture the continuity at such singular locations, which adversely affect the optimization process.
-In contrast to this behavior, the signatures derived in Sec.~\ref{sec_sign} have smooth transition at these singular locations due to shape similarity between a closed and just opened curve or motion.
+For example, a small change in crank length ($l_1$) can open a previously closed coupler path.
+Most of the methods based on Fourier descriptors cannot capture the continuity at such singular locations, which adversely affect the optimization process.
+In contrast to this behavior, the signatures derived in Sec.~\ref{sec_sign} have a smooth transition at these singular locations due to shape similarity between closed and just opened curve or motion.
 
-To illustrate this, we perform sensitivity analysis in the vicinity of a singularity as follows:
+To illustrate this, we perform sensitivity analysis in the vicinity of the singularity as follows:
 A four-bar with link ratios ($l_1:0.55$, $l_2:1$, $l_3:1.5$, $l_4:1$, $l_5:1$) is subjected to gradual change in parameters $l_1$ and $l_3$ by the amount (-0.2, 0.2) in steps of 0.01.
-Error function between motions of new and initial four bar are calculated using Eq.~\req{objectiveFunMotion} .
+Error function between motions of new and initial four-bar are calculated using Eq.~\req{objectiveFunMotion} .
 Figure~\ref{saCouplerCurves} shows coupler motion of some of the four-bars while Fig.~\ref{saMotionSignatures} depicts their motion signatures. Please note that these two figures show the effect of changing only one parameter $l_1$.
-It can be seen from Fig.~\ref{saCouplerCurves} that there exists a discontinuity in topology of the coupler curves even though their shapes have a continuous shift.
+It can be seen from Fig.~\ref{saCouplerCurves} that there exists a discontinuity in the topology of coupler curves even though their shapes have a continuous shift.
 Our method captures this continuity, which is shown by error function evaluations depicted in Fig.~\ref{saErrorFunction}, where it is visible that surface is well behaved in the singularity region. This error function accounts for changes to both the parameters $l_1$ and $l_3$.
 
 \begin{figure}
 \centering
 \includegraphics[width=240pt]{figure/fig_sa_coupler_curves.eps}
-  \caption{Coupler Motions of the four bar linkage with variation of parameters $l_1$ and $l_2$. It can be seen that motion topology changes from close-loop Grashof to open loop Triple-Rocker.}
+  \caption{Coupler Motions of the four-bar linkage with variation of parameters $l_1$ and $l_2$. It can be seen that motion topology changes from close-loop Grashof to open loop Triple-Rocker.}
 \label{saCouplerCurves}
 \end{figure}
 
@@ -383,18 +390,18 @@ Our method captures this continuity, which is shown by error function evaluation
 \end{figure}
 
 \section{Clustered Database of Planar Linkages}\label{sec_db_ae}
-Having an invariant representation facilitating partial matching greatly reduces data required to sample all possible types shapes of coupler motion.
+Having an invariant representation facilitating partial matching greatly reduces data required to sample all possible types of shapes of coupler motion.
 We have built a database of planar four-bar linkages with revolute joints as an example, but the approach is same for any planar motion generating machine.
-We generate this database comprising of $40,000$ linkages, while taking following aspects into consideration.
+We generate this database comprising of $40,000$ linkages while taking following aspects into consideration.
 \begin{enumerate}
   \item Sampling should maximize the uniformity of its distribution over the space of four-bar coupler motions.
   \item Data generation should be parallelized.
   \item It should be scalable to higher-order linkages.
 \end{enumerate}
 Figure~\ref{fourbar} represents parametric representation of four-bar linkage with parameters ($l_1,l_2,l_3,l_4,l_5$).
-As mapping between four-bar linkage parameter space and coupler motion space is highly non-linear, uniform distribution over linkage parameter space does not necessarily mean uniform sampling over motion space.
+As mapping between four-bar linkage parameter space and coupler motion space is highly non-linear, uniform distribution over linkage parameter space does not necessarily mean uniform sampling over coupler motion space.
 Thus, an efficient approach would be to sample more in the regions where sensitivity is maximum.
-We have observed that whenever the link ratios of four-bar linkage are close to 1, the sensitivity of the shape of a coupler motion is higher than otherwise.
+We have observed that whenever the link ratios of four-bar linkage are close to 1, the sensitivity of shape of a coupler motion is higher than otherwise.
 Thus, we have chosen Log-Normal probability distribution ($\mu = 0,\sigma = 0.6 $) for selecting the link ratios : $(l_1, l_2, l_3)$ as shown in Fig.~\ref{logNormal}, and Normal Distribution ($\mu = 0,\sigma = 2 $) for $(l_4, l_5)$.
 
 \begin{figure}
@@ -405,7 +412,7 @@ Thus, we have chosen Log-Normal probability distribution ($\mu = 0,\sigma = 0.6 
 \end{figure}
 
 \subsection{Dimensionality Reduction using Auto-Encoders}
-Each data point in database consists of discrete signature of motion, which is kept to be of 100 float digits.
+Each data point in the database consists of discrete signature, which is kept to be of 100 float digits.
 In order to have efficient query operations, we perform Hierarchical Clustering; a method that summarizes and creates a hierarchy in the database.
 Clustering in higher dimensions suffers from \emph{Curse of Dimensionality}\cite{marimont1979}, thus we first perform dimensionality reduction using Auto-encoder Neural Networks.
 Auto-encoder is a powerful mapping model, which learns to encode the input data in very compact representation and can reconstruct the input with minimal error; performing much better than Principal Component Analysis\cite{hinton2006}.
@@ -422,7 +429,7 @@ Input-output relationship of a layer is given by,
 \end{eqnarray}
 where $W_i$ is weight matrix with dimensions $(d^{i}, d^{(i-1)})$ and $b_i$ is $d^{(i)}$ dimensional bias vector of $i^{th}$ layer, which are computed in the process of training.
 Auto-encoders are trained to reconstruct the input, in this way each layer encodes the input, which is sufficient for the next layers to reconstruct the output.
-Objective of the training is to find out set of weights and biases that minimizes the error loss given by,
+The objective of training is to find out the set of weights and biases that minimizes the error loss given by,
 
 \begin{equation}\label{nnloss}
   \argminA_{W, b} \sum_{i=0}^{N} || X_i - \tilde{X}_i ||^2,
@@ -430,37 +437,37 @@ Objective of the training is to find out set of weights and biases that minimize
 where $X_i$ is input, $\tilde{X}_i$ is reconstructed output and N is number of training examples.
 
 
-Once a network is trained, output of the bottle-neck layer $(h_{ib})$ represents the compressed feature space ($Z$).
-As the bottleneck layer has 10 neurons and input is 100 dimensional vector, it is evident that information is compressed by a factor of 10, while achieving $95\%$ reconstruction accuracy as a result of training.
+Once a network is trained, the output of the bottle-neck layer $(h_{ib})$ represents the compressed feature space ($Z$).
+As bottleneck layer has 10 neurons and input is a 100-dimensional vector, it is evident that information is compressed by a factor of 10, while achieving $95\%$ reconstruction accuracy as the result of training.
 Standard clustering algorithms are performed on this latent\footnote{compressed output of bottleneck layer.} space for better clustering\cite{song2013}.
 We use Agglomerative Clustering, a method of Hierarchical clustering, which is an approach to partitioning clustering for identifying groups in the dataset.
 \emph{Ward}\cite{ward1963} criterion is used for clustering, which minimizes the variance of the clusters being merged.
 The distance metric used is the Euclidean distance in the latent space.
-Although the more accurate distance metric is distance function discussed in sec.~\ref{sec_distanceMetric}, it is very expensive to calculate it for entire database.
-Signatures with ${O}(m)$ points, take ${O}(m\log{}m)$ time for each comparisons and there are ${O}(N^2)$ number of comparisons to be made for database of $N$ points.
+Although the more accurate distance metric is distance function discussed in sec.~\ref{sec_distanceMetric}, it is very expensive to calculate it for the entire database.
+Signatures with ${O}(m)$ points take ${O}(m\log{}m)$ time for each comparison and there are ${O}(N^2)$ number of comparisons to be made for the database of $N$ points.
 When user raises one such query, we first find $k$ nearest neighbors among $1500$ cluster centers, then descend into their clusters if needed.
 Motion with highest similarity score is returned along with its corresponding linkage parameters, which if required, are further fine-tuned to match the query using local optimization methods. Computationally, on a 2.4 GHz Core i5 MacBook Pro with 8 GB memory, every query takes 23 seconds on average to find the sorted list of nearest neighbors among cluster centers.
 
 \begin{figure}
 \centering
 \includegraphics[width=270pt]{figure/fig_auto_encoder.eps}
-  \caption{A small scale version of the Auto-Encoder. This network takes 5 dimensional input in the input layer. At each encoder layer, input is compressed into vector of lesser dimensions, lowest at the bottleneck layer.}
+  \caption{A small-scale version of the Auto-Encoder. This network takes 5-dimensional input in the input layer. At each encoder layer, the input is compressed into a vector of lesser dimensions, lowest at the bottleneck layer.}
 \label{autoEncoder}
 \end{figure}
 
 
 \section{Case Studies}\label{sec_example}
-This sections presents two case studies presenting the effectiveness of our approach for path and motion synthesis applications.
+This section presents two case studies presenting the effectiveness of our approach for path and motion synthesis applications.
 \subsection{Path Generation}
-In the design phase of a rehabilitation device that assists people stand from sitting position, it is required to generate linkages that can execute a sit-to-stand (STS) trajectory of the hip joint as shown in Fig.~\ref{ex1_path}.
+In the design phase of a rehabilitation device that assists people to stand from sitting position, it is required to generate linkages that can execute a sit-to-stand (STS) trajectory of the hip joint as shown in Fig.~\ref{ex1_path}.
 Table~\ref{hipPathTab} presents the discretized path data.
 As our approach requires parametric representation of path, we first fit a cubic B-Spline with cord length parametrization through path data points to generate parametric curve shown in Fig.~\ref{ex1_path}.
 We compute its path signature by the steps mentioned in Algorithm ~\ref{alg_signature} and raise the query for nearest neighbors among 1500 cluster centers of our database.
 The distance metric for finding neighbors is $1-Cn_{max}$ in Eq.~\req{objectiveFunPath}.
 Table~\ref{ex1_knnLinkageData} tabulates the link ratios corresponding to obtained nine nearest neighbors.
-Next step is to compute actual parameters according to position, scale and orientation of the path.
+Next step is to compute actual parameters according to position, scale, and orientation of the path.
 It is done by comparing analogous points found by offset index $j$ in Eq.~\ref{nccEq}.
-Figure ~\ref{ex1_solns} shows first eight four bar mechanisms corresponding to nearest signatures to path signature of input.
+Figure ~\ref{ex1_solns} shows first eight four-bar mechanisms corresponding to nearest signatures to path signature of input.
 It can be clearly seen that these linkages generate highly accurate paths for the sit to stand activity.
 
 \begin{table}
@@ -527,14 +534,14 @@ Point & x & y & Point & x & y \\
 
 \subsection{Motion Generation}
 The task is to find a pool of linkage systems that can perform snow-shoveling with a motion shown in Fig.~\ref{motionQuery}.
-The motion data is tabulated in Table ~\ref{poseData} to which we fit a B-spline with cord length parametrization in order to get parametric representation of motion.
+The motion data is tabulated in Table ~\ref{poseData} to which we fit a B-spline with cord length parametrization in order to get the parametric representation of motion.
 The task can also be treated as a finite position motion generation and solved for valid solutions.
-We try with our real time computational methods of algebraic fitting\cite{generalfitting-JCISE},\cite{deshpande2017} but obtained solutions suffer from circuit defect, which is not surprising as those methods do not account for continuity of the input positions.
+We try with our real-time computational methods of algebraic fitting\cite{generalfitting-JCISE},\cite{shrinathpurwar2017} but obtained solutions suffer from circuit defect, which is not surprising as those methods do not account for the continuity of input positions.
 
 Now we employ the approach presented in this paper.
-First step is to calculate motion signature of the task motion using steps mentioned in Algorithm ~\ref{alg_signature}.
-For that we follow the steps given in section~\ref{sec_sign} to obtain the motion signature depicted in Fig.~\ref{queryResult}.
-Next we raise the signature query for nearest signatures among the cluster centers of the database.
+The first step is to calculate motion signature of the task motion using steps mentioned in Algorithm ~\ref{alg_signature}.
+For that, we follow the steps given in section~\ref{sec_sign} to obtain the motion signature depicted in Fig.~\ref{queryResult}.
+Next, we raise the signature query for nearest signatures among cluster centers of the database.
 Fig.~\ref{queryResult} shows nine nearest neighbor signatures along with the task signature.
 Table~\ref{ex2_knnLinkageData} presents the linkage parameters corresponding to the nearest neighbors along with their distance score from the task.
 Coupler motions of these linkages have a part, which matches with the shape of input motion query.
@@ -618,9 +625,9 @@ Pose & x & y & $\theta$ & Pose & x & y & $\theta$ \\
 This approach presents a novel machine-learning approach to generation of conceptual designs of defect-free linkage synthesis.
 The approach is highly data-efficient due to similarity invariant representation of paths and motion, which also facilitates partial matching.
 Sensitivity analysis indicates that complexity of the objective function, although multimodal and nonlinear, is not overly complex and certainly well behaved in the singular spaces.
-Hierarchically clustered database provides efficient query search.
-Finally, the effectiveness of presented approach is showcased by two case studies for each of which nine defect free solutions were found.
-Although our method can provide highly accurate results, our focus here is to generate high number of defect free solutions that can perform the task in more or less similar fashion;
+The hierarchically clustered database provides efficient query search.
+Finally, the effectiveness of the presented approach is showcased by two case studies for each of which nine defect-free solutions were found.
+Although our method can provide highly accurate results, our focus here is to generate a high number of defect-free solutions that can perform the task in more or less similar fashion;
 because more often than not, linkage synthesis algorithms are desired to be prolific in terms of concept generation than to produce highly accurate, but very few solutions. The approach is general enough to be extended to higher order linkage systems for which there are even fewer methods available for synthesizing defect-free solutions.
 
 \begin{acknowledgment}
