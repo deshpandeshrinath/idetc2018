@@ -102,7 +102,7 @@ These defects in the single degree of freedom mechanisms are thoroughly discusse
 \label{overallMethod}
 \end{figure*}
 
-In this paper, we 1) employ pattern recognition and computational shape analysis, to create a similarity transforms-independent signature for coupler path and motion, 2) exploit the non-linear nature of relationship between the linkage parameters and coupler motions to create a sensitive, wide-ranging, compact, and efficient database with hierarchical clustering, and 3) enable dimensionality reduction using Auto-encoder Neural Networks.
+In this paper, we 1) employ pattern recognition and computational shape analysis, to create a similarity transform-independent signature for coupler path and motion, 2) exploit the non-linear nature of relationship between the linkage parameters and coupler motions to create a sensitive, wide-ranging, compact, and efficient database with hierarchical clustering, and 3) enable dimensionality reduction using Auto-encoder Neural Networks.
 When a user inputs a motion or a path, a query representing invariant signature \footnote{path or motion signature} of the input is raised for $k$ nearest neighbors among cluster centers in the database.
 These $k$ neighbors, if needed, are subjected to fine-tuning by local optimization to obtain a set of defect-free solutions.
 We define a novel objective function for defect-free motion generation problems and present an algorithm for partial matching of motions.
@@ -131,7 +131,7 @@ Given highly nonlinear mapping between linkage parameters and coupler trajectory
 We address this issue by employing log-normal distribution in the linkage parameter space to generate data and perform compact clustering of the data using machine learning techniques.
 Hierarchy is created in the database by means of clustering, where the top level comprises of data points called cluster centers, which are representative of the cluster points in lower levels.
 Wandling~\cite{wandling2000} and Yu et al.~\cite{yue-pathgen2011} have built libraries with all possible coupler curves, where one curve is broken down into many segments for creating data for partial curves.
-In contrast to this, we need to store only one curve representing all the segments in it as our representation facilitates partial matching.
+In contrast to this, we need to store only one curve representing all the segments in it, as our representation facilitates partial matching.
 None of the other previous methods facilitate this partial matching of open motion curve into another open or closed curve, which significantly contributes to providing a large number of solutions, and reduces the data requirement even further.
 
 Rest of this paper is organized as follows. Section~\ref{sec_sign} presents the computation of motion and path signatures.
@@ -175,7 +175,8 @@ Signatures for path and motion are termed as path signature and motion signature
 For calculating path signature, we use formulations developed by Cui et.al\cite{cui2009}.
 
 Consider a motion given in parametric form as, $x:x(t), y:y(t), \theta:\theta(t)$.
-Here, $\theta(t)$ represents the change in orientation along the path, measured with respect to initial orientation and is not restricted in the domain $[-\pi, \pi]$.
+Where, $\theta(t)$ is the change in orientation along the path with respect to initial orientation.
+It should be noted that $\theta(t)$ is a continuous curve with domain ($-\infty$, $\infty$) in contrast to conventional domain i.e. [$-\pi$, $\pi$].
 
 Curvature $\kappa(t)$ of the path $(x:x(t), y:y(t))$ and its integral $K(t)$ is given by,
 \begin{eqnarray}
@@ -248,7 +249,7 @@ In this section, we formulate functions that evaluate the similarity between two
 These distance functions can be used as error metric, which can be minimized using optimization methods.
 
 \subsection{Partial Matching of Path Signatures}\label{sec_ncc}
-When a path query is raised, it can be very useful to know whether this path matches with the part of a path from the database.
+When a path query is raised, it can be very useful to know whether this path matches with a part of a path from the database.
 This subsection presents a method for determining this partial similarity.
 
 Let us consider two coupler paths; namely \emph{Part} and \emph{Whole} as shown in~\ref{wholePart}.
@@ -268,7 +269,7 @@ The partial matching works as follows:
 where $Cn(j, p, W)$ is the normalized cross-correlation value when $p$ is matched against $W$ at $j^{th}$ index; $p_{span}$ is length of the array $p$ and $\bar{W}(j:j + p_{span})$ is mean of the values of array $W$ between index range of ($j, j+p_{span}$).
 
 Here, $p$ acts as a template that tries to find the best match against $W$ while sliding over it along $j$.
-Domain of $Cn(j, p, W)$ is [0, 1], where 1 represents the complete embedment of $p$ inside $W$.
+Domain of $Cn(j, p, W)$ is [0, 1], where 1 represents the complete embedment\footnote{\emph{Path} is identical to a portion of \emph{Whole}.} of $p$ inside $W$.
 
 The maximum score of the matching $Cn_{max}(p, W)$ represents similarity of the template in $W$, and offset index $j$ at which maximum occurs is the start point for matching.
 As we know that the signature reverses with reversal of the direction of $t$, we compute the correlation along both directions and select the best matching score, offset index and the matching direction of sampling.
@@ -277,7 +278,7 @@ Figure~\ref{ncc} depicts normalized cross correlation function over the sliding 
 \begin{figure}
 \centering
 \includegraphics[width=240pt]{figure/fig_whole_part.eps}
-  \caption{Part path is formed by trimming whole path followed by translation and scaling.}
+  \caption{\emph{Part} path is formed by trimming whole path followed by translation and scaling. Arrows indicate the increasing direction of parameter $t$.}
 \label{wholePart}
 \end{figure}
 
