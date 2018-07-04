@@ -134,7 +134,7 @@ This phenomenon is called circuit defect in the linkage, which makes the linkage
 To deal with it, a naive approach is to tweak precision positions in a brute-force way within the tolerance until a solution is found.
 Even if the defect-free solution is found, the coupler motion in-between the precision points may go through undesired position and orientation.
 This happens because the method discards the functional aspect of continuous motion and turns it into a vacuous interpolation problem.
-This tells us that just finding a defect-free linkage with respect to the precision positions is not enough to qualify as a useful mechanism.
+This tells us that just being a defect-free linkage with respect to the precision positions is not enough to qualify as a useful mechanism.
 
 Thus, we present a perceptive way of synthesizing defect free linkages for motion and path generation problems.
 %As a guiding direction to advance state of the art, we propose following criteria for an effective mechanism synthesis method,
@@ -497,7 +497,7 @@ Thus, we have chosen Log Normal probability distribution ($\mu = 0,\sigma = 0.6 
 
 We use machine learning techniques such as clustering and data-compression using auto-encoder neural networks to come up with good initial guesses for local optimization.
 First, We cluster the database using hierarchical clustering algorithm.
-Then, we find representative data point in each cluster called cluster center and form their set.
+Then, we find representative data point in each cluster called cluster centers and form their set.
 This set of cluster centers represent a diverse group of linkages.
 When a query is raised in the database, the first step is to search for neighbors in the set of cluster centers.
 This often yields a diverse set of neighbors and is used as the set of independent initial guesses for local optimization.
