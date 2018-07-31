@@ -5,8 +5,8 @@
 
 \begin{document}
 \maketitle
-We are grateful to all of the reviewers, who took out their valuable time to review our paper. This work would be incomplete without the reviewers' inputs.
-The reviewers' comments are given in \emph{italicized}, whereas our answers are in normal text.
+We are grateful to all of the reviewers for their comments and questions and believe that the new version of the paper would resolve all the outstanding issues.
+The reviewers' comments are formatted \emph{emphasized}, whereas our replies are in Roman.
 
 \section{Reviewer 1}
 %The authors propose applying machine learning techniques to solving planar four-bar linkage problems. The authors claim gaps exist in existing methods that do not account for circuit and branch defects in the synthesis process.
@@ -25,39 +25,27 @@ Manuscript lacks a clear motivation linked to the practitioner.
 The research objective, methods, and approach are not clear.
 }
 
-Thank you for pointing out an important point.
-We have rewritten the introduction section to clearly explain motivation and overview of the approach.
-The motivation subsection clearly explains significance of the gaps in current practices.
-We summarize the motivation as follows,
+We have rewritten the introduction section to clearly explain motivation and overview of the approach. The motivation subsection clearly explains significance of the gaps in current practices. In summary, the stakeholders are machine designers who have to generate useful mechanism design concepts during the conceptual design phase. The classical mechanism synthesis problem deals with computing type and dimensions of a linkage system for performing specific tasks, which are categorized as the path, motion and function generation.
+Path generation task aims to synthesize a mechanism which can guide a point along a prescribed path. On the other hand, the objective of motion generation task is to synthesize a mechanism which can guide a rigid body along a prescribed motion. The prescribed path is a time sequence of positions, whereas the prescribed motion is a time sequence of positions and orientations.
 
-The classical mechanism synthesis problem deals with computing type and dimensions of a linkage system for performing specific tasks, which are categorized as the path, motion and function generation.
-Path generation task aims to synthesize a mechanism which can guide a point along a prescribed path.
-On the other hand, the objective of motion generation task is to synthesize a mechanism which can guide a rigid body along a prescribed motion.
-The prescribed path is a time sequence of positions, whereas the prescribed motion is a time sequence of positions and orientations.
-
-The majority of mechanism synthesis methods are based on the precision point approach.
-This approach is a clever approximation trick to solve the synthesis tasks, where the task is discretized into precision points.
-These points instead of the actual task, are treated as interpolation or approximation task for mechanism synthesis.
-However, this way of formulation loses important information about the actual continuous task and can lead to solutions with the order, circuit and branch defects.
+The majority of mechanism synthesis methods are based on the precision point approach. This approach is a clever approximation trick to solve the synthesis tasks, where the task is discretized into precision points.
+These points instead of the actual task, are treated as interpolation or approximation task for mechanism synthesis. However, this way of formulation loses important information about the actual continuous task and can lead to solutions with the order, circuit and branch defects.
 The defect in a mechanism renders itself useless for its intended application.
 
 \begin{figure}
 \centering
-\includegraphics[width=200pt]{fig_circuit_defect.eps}
+\includegraphics[width=200pt]{fig_circuit_defect-eps-converted-to.pdf}
   \caption{The mechanism synthesis problem for the prescribed motion.
   The four-bar mechanism obtained using the precision position approach suffers from circuit defect, as no coupler circuit passes through all precision positions.}
 \label{circuit_defect}
 \end{figure}
 
 Figure~\ref{circuit_defect} shows the prescribed motion and its discretized precision positions.
-In the case of motion generation problem, a four-bar can go through at most five precision positions and it is called as classical Burmester~\cite{Burmester86} problem.
+In the case of motion generation problem, a four-bar can go through at most five precision positions~\cite{Burmester86}.
 For this type of problem, only finite solutions exist and in this case, only one solution is obtained as shown in the Fig.~\ref{circuit_defect}.
-Although it can be seen that coupler of the four-bar passes exactly through five precision positions, it can not do it without changing the circuit.
+Although it can be seen that coupler of the four-bar passes exactly through five precision positions, it can not do so without changing the circuit.
 A circuit represents an assembly mode in which the mechanism is put together.
 This phenomenon is called circuit defect in the linkage, which makes the linkage useless for the prescribed task.
-Even if the defect-free solution is found, the coupler motion in-between the precision points may go through undesired position and orientation.
-This happens because the method discards the functional aspect of continuous motion and turns it into a vacuous interpolation problem.
-This tells us that just being a defect-free linkage with respect to the precision positions is not enough to qualify as a useful mechanism.
 
 To capture the complete prescribed task, we represent it as a continuous parametric curve.
 The objective is to find a linkage, that has a coupler motion or path compatible with the task.
@@ -67,14 +55,14 @@ We exploit machine learning to maximize the diversity, and for efficient storage
 The outcomes of this approach are a large number of diverse concept solutions.
 
 The importance of diverse concept generation is mentioned in motivation subsection as follows,
-``The synthesis method should be prolific in terms of concept generation to 1) realize the potential of attainable design possibilities, and 2) have the agility to adapt a design to evolving requirements."
+``The synthesis method should be prolific in terms of concept generation to 1) realize the potential of attainable design possibilities, and 2) have the agility to adapt a design to evolving requirements." Our method only deals with the coupler curves and is not dependent on the linkage type. Thus, it is readily scalable to any type of planar linkage.
 \\
 
   \item \emph{
 Further, most of the citations in the manuscript, not including the authors' previous work, are over 10 years old.
 }
 
-Thanks, we have added recent citations reporting work in the area of mechanism synthesis and machine learning applications to mechanisms.
+We have added recent citations reporting work in the area of mechanism synthesis and machine learning applications to mechanisms.
 \\
 
   \item \emph{
@@ -82,7 +70,7 @@ Instead, the authors should motivate their work with important use cases that ad
 }
 
 Thank you for your comments.
-We have added the example shown in the Fig.~\ref{circuit_defect} to the motivation section, which clearly explains the limitations of current practices.
+We have added the example shown in the Fig.~\ref{circuit_defect} to the Introduction section, which clearly explains the limitations of current practices.
 We have used the same example in the example section to clearly juxtapose our results against results of precision point approach.
 \\
 
@@ -90,7 +78,7 @@ We have used the same example in the example section to clearly juxtapose our re
  The reason for employing machine learning techniques is artificially explained in one sentence at the end of Section 3.3. Expand the reason for employing machine learning.
 }
 
-We have expanded the reason for employing machine learning techniques in the subsection titled `Dimensionality Reduction using Auto-Encoders' as follows,
+We have expanded the reason for employing machine learning techniques in the subsection titled `Dimensionality Reduction using Auto-Encoders' as follows:
 
 ``In order to have efficient query operations, we perform Hierarchical Clustering; a method that summarizes and creates a hierarchy in the database.
 Clustering in higher dimensions suffers from \emph{Curse of Dimensionality}\cite{marimont1979}, thus we first perform dimensionality reduction using Auto-encoder Neural Networks.
@@ -103,34 +91,30 @@ First, We cluster the database using hierarchical clustering algorithm.
 Then, we find representative data point in each cluster called cluster centers and form their set.
 This set of cluster centers represent a diverse group of linkages.
 When a query is raised in the database, the first step is to search for neighbors in the set of cluster centers.
-This often yields a diverse set of neighbors and is used as a set of initial guesses for local optimization.
-"
-\\
+This often yields a diverse set of neighbors and is used as a set of initial guesses for local optimization."\\
 
   \item \emph{
   In Fig. 1 (overview), should an arrow return from ``Local Optimizer" to ``Accurate?" or is the assumption that all outputs from the ``Local Optimizer" are accurate?
 }
 
-Thank you for mentioning that.
-We have fixed it.
-\\
+Thank you for catching that. We have fixed it.\\
 
-  \item \emph{
-The values used in the sensitivity analysis are not justified. How did the authors choose the values?
+  \item \emph{The values used in the sensitivity analysis are not justified. How did the authors choose the values?
 }
 
-Thank you for the comment. We have added following line,
-``The link ratios are chosen such that, small changes in some parameters lead to a topological change in the coupler curve."
-\\
+Due to the complex relationship between parameter space and generated motion, small changes in linkage parameters can produce large and discontinuous structural changes in the generated motions.
+For example, a small change in crank length of a  planar four-bar can open a previously closed coupler path.
+Most of the methods based on Fourier descriptors cannot capture the continuity at such singular locations, which adversely affect the optimization process.
+In contrast to this behavior, the signatures derived in our paper have a smooth transition at these singular locations due to shape similarity between closed and just opened curve or motion. The link ratios are chosen such that, small changes in some parameters lead to the topological change in the coupler curve.\\
 
   \item \emph{
 The quality of research methods cannot be assessed.
 }
 
-We have employed already proven techniques such as b-spline interpolation, hierarchical clustering, data compression using auto-encoders, Powell's local search.
+We have employed  proven techniques such as B-spline interpolation, hierarchical clustering, data compression using auto-encoders, and Powell's local search.
 We have formulated the signatures of coupler path and motion, based on proven 2D curve matching technique by Cui et al.\cite{cui2009}.
 We have presented the validation of the partial matching algorithms using examples in section 4.
-Finally, we present two case studies, where we obtain the diverse set of useful linkage solutions for path and motion generation problem.
+Finally, we present two case studies, where we obtain a diverse set of useful linkage solutions for path and motion generation problem.
 \\
 
   \item \emph{
@@ -164,7 +148,7 @@ Overall, the method provides a holistic approach towards the prescribed path and
 \section{Reviewer 2}
 
 \begin{itemize}
-  \item \emph{
+  \item[] \emph{
 $1$. Please provide brief descriptions (possibly with examples) of circuit and branch defects that
 occur when using existing synthesis methods.
 }
@@ -173,14 +157,14 @@ Thanks for raising this point.
 We have added one example in the introduction section, to illustrate the defects in mechanisms when using existing synthesis methods.
 \\
 
-  \item \emph{
+  \item[] \emph{
   $2$. In Figure 2b, why is the range of parameter $t$ for $\theta(t)$ is only 0-50, rather than 0-100?
 }
 
 Thank you for the comment. It was a plotting mistake. We have fixed it.
 \\
 
-  \item \emph{
+  \item[] \emph{
 $3.$ In Algorithm 2, Line 8, should it be $\theta(tmp)$ instead of $\kappa(tmp)$ ?\\
 $4.$ Please check the parenthesis in Equation 5.\\
 $6.$ There are several typos involving subscripts all throughput the paper. Please fix them.
@@ -189,24 +173,22 @@ $6.$ There are several typos involving subscripts all throughput the paper. Plea
 Thanks for the comments. We have fixed them.
 \\
 
-  \item \emph{
+  \item[] \emph{
 $5.$ In Figure 15, $X$ and $\tilde{X}$ mismatch the input and output vectors shown in the diagram.
 }
 
-Figure 15 shows $X$ as the input and $\tilde{X}$ as the output of auto-encoder network, which matches with the description.
-The query regarding the mismatch is not clear to us.
-Could you please elaborate on the query?
+What was Figure 15 before is now the Figure 16. This figure shows $X$ as the input and $\tilde{X}$ as the output of auto-encoder network, which dimensionally match with each other. In between layers can have vectors of lower dimensions.
 \\
 
 
-  \item \emph{
+  \item[] \emph{
 $7.$ In section 5.1, it is argued that Euclidean distance is used as the distance metric in latent space for
 computational efficiency, whereas in section 6.1, $(1 - C_n)$ is mentioned as the distance
 metric. Please clarify.
 }
 
 Thanks for the feedback. We have made changes in the text to clarify which metric is used at what point.
-In section 5.1, we added following lines,
+In section 5.1, we have added following:
 
 ``The distance metric used for clustering is the Euclidean distance in the latent space.
 Although the more accurate distance metric is distance function discussed in sec 3, it is very expensive to calculate it for the entire database.
@@ -217,7 +199,7 @@ If a cluster center is not sufficiently close, we descend into its corresponding
 The distance metric for finding neighbors among cluster centers is $1-Cn_{max}$ in Eq. 5.  "
 \\
 
-  \item \emph{
+  \item[] \emph{
 $8.$ It is unclear how local optimization is performed after finding the nearest cluster centers. Is the
 search performed in each cluster independently? Are multiple paths/motions in the database
 combined with partial matching? Please elaborate.
@@ -232,7 +214,7 @@ This often yields a diverse set of neighbors, and is used as a set of independen
 \\
 
 
-  \item \emph{
+  \item[] \emph{
 $9.$ Please comment on how this approach can be extended to handle process specific constraints?
 For example, the pivots should lie above ground in show-shoveling case study (6.2).
 }
